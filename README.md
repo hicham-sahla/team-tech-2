@@ -1,5 +1,5 @@
 # blok-tech-feature
-Eerste feature voor mijn Nodje JS project
+Eerste feature voor mijn NodeJS project
 
 Naam: Hicham Sahla
 </br>
