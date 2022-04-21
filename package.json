@@ -1,0 +1,23 @@
+{
+  "name": "blok-tech-feature",
+  "version": "1.0.0",
+  "description": "Eerste feature voor mijn Nodje JS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hicham-sahla/blok-tech-feature.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hicham-sahla/blok-tech-feature/issues"
+  },
+  "homepage": "https://github.com/hicham-sahla/blok-tech-feature#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
