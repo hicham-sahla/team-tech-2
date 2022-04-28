@@ -1,0 +1,46 @@
+<form>
+  <div class="mb-3">
+    <div class="form-floating mb-3">
+      <input type="text" required class="form-control" id="firstName" placeholder="Voornaam">
+      <label for="firstName">Voornaam</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" required class="form-control" id="lastName" placeholder="Achternaam">
+      <label for="lastName">Achternaam</label>
+    </div>
+  </div>
+  <h3>Woonplaats</h3>
+  <div class="mb-3">
+    <select class="form-select" required aria-label="Default select">
+      <option selected>Selecteer je provincie</option>
+      <option value="1">Noord-Holland</option>
+      <option value="2">Zuid-Holland</option>
+      <option value="3">Utrecht</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-floating">
+          <input type="text" required class="form-control" id="postalCode" placeholder="Postcode">
+          <label for="postalCode">Postcode</label>
+        </div>
+      </div>
+      <div class="col-sm-6 mt-3 mt-sm-0">
+        <div class="form-floating">
+          <input type="text" required class="form-control" id="houseNumber" placeholder="Huisnummer">
+          <label for="houseNumber">Huisnummer</label>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <div class="form-floating">
+          <input type="text" required class="form-control" id="streetName" placeholder="Straatnaam">
+          <label for="streetName">Straatnaam</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

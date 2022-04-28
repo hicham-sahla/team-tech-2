@@ -9,12 +9,17 @@ app.set('view engine', 'ejs');
 // index page
 app.get('/', function(req, res) {
   res.render('pages/index');
+  
 });
 
 // about page
-app.get('/about', function(req, res) {
-  res.render('pages/about');
+app.get('/getting-started', function(req, res) {
+  var tagline = "No programming concept is complete without a cute animal mascot.";
+
+  res.render('pages/onboarding', {
+    tagline: tagline
+  });
 });
 
 app.listen(3000);
-console.log('Server is listening on port 8080');
+console.log('Server is listening on port 3000');
