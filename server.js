@@ -21,5 +21,7 @@ app.get('/getting-started', function(req, res) {
   });
 });
 
+app.use(express.static(__dirname + '/assets'));
+
 app.listen(3000);
 console.log('Server is listening on port 3000');

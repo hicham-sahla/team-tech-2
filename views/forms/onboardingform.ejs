@@ -8,8 +8,17 @@
       <input type="text" required class="form-control" id="lastName" placeholder="Achternaam">
       <label for="lastName">Achternaam</label>
     </div>
-  </div>
-  <h3>Woonplaats</h3>
+    <div class="mb-3">
+      <div class="input-group mt-3">
+        <input type="file" class="form-control" id="formFile" aria-describedby="removeImage" aria-label="Upload" onchange="preview()">
+        <button class="btn btn-outline-secondary" onclick="clearImage()" type="button" id="removeImage">Verwijderen</button>
+      </div>
+      <img id="frame" src="" class="img-fluid"/>
+
+   
+   
+    </div>
+  <h3>Waar hoop je iemand te vinden</h3>
   <div class="mb-3">
     <select class="form-select" required aria-label="Default select">
       <option selected>Selecteer je provincie</option>
@@ -19,25 +28,20 @@
     </select>
   </div>
   <div class="mb-3">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="form-floating">
-          <input type="text" required class="form-control" id="postalCode" placeholder="Postcode">
-          <label for="postalCode">Postcode</label>
-        </div>
-      </div>
-      <div class="col-sm-6 mt-3 mt-sm-0">
-        <div class="form-floating">
-          <input type="text" required class="form-control" id="houseNumber" placeholder="Huisnummer">
-          <label for="houseNumber">Huisnummer</label>
-        </div>
-      </div>
-      <div class="col-12 mt-3">
-        <div class="form-floating">
-          <input type="text" required class="form-control" id="streetName" placeholder="Straatnaam">
-          <label for="streetName">Straatnaam</label>
-        </div>
-      </div>
+    <select class="form-select" required aria-label="Default select">
+      <option selected>Selecteer je woonplaats</option>
+      <option value="1">Amsterdam</option>
+      <option value="2">Haarlem</option>
+      <option value="3">Utrecht</option>
+    </select>
+  </div>
+  <div class="mb-3">
+  </div>
+  <h3>Vertel me wat meer over je zelf </h3>
+  <div class="mb-3">
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Vertel wat over je passies of interesses" id="passion" style="height: 100px"></textarea>
+      <label for="passion">Je passie</label>
     </div>
   </div>
 
