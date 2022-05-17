@@ -8,16 +8,19 @@
       <input type="text" required class="form-control" id="lastName" placeholder="Achternaam">
       <label for="lastName">Achternaam</label>
     </div>
-    <div class="mb-3">
-      <div class="input-group mt-3">
-        <input type="file" class="form-control" id="formFile" aria-describedby="removeImage" aria-label="Upload" onchange="preview()">
-        <button class="btn btn-outline-secondary" onclick="clearImage()" type="button" id="removeImage">Verwijderen</button>
-      </div>
-      <img id="frame" src="" class="img-fluid"/>
+      <div class="row my-3">
+        <h3>Upload een foto van jou en je huisdier</h3>
+        <div class="col-md-3">
+          <img id="frame" src="img/profile.png" class="img-fluid"/>
 
-   
-   
-    </div>
+        </div>
+        <div class="col-md-9 mt-3 mt-md-0">
+          <div class="input-group">
+            <input type="file" class="form-control" id="formFile" aria-describedby="removeImage" aria-label="Upload" onchange="preview()">
+            <button class="btn btn-outline-secondary" onclick="clearImage()" type="button" id="removeImage">Verwijderen</button>
+          </div>
+        </div>
+      </div>
   <h3>Waar hoop je iemand te vinden</h3>
   <div class="mb-3">
     <select class="form-select" required aria-label="Default select">
@@ -37,14 +40,45 @@
   </div>
   <div class="mb-3">
   </div>
-  <h3>Vertel me wat meer over je zelf </h3>
+  <h3>Vertel wat meer over je zelf </h3>
   <div class="mb-3">
     <div class="form-floating">
       <textarea class="form-control" placeholder="Vertel wat over je passies of interesses" id="passion" style="height: 100px"></textarea>
       <label for="passion">Je passie</label>
     </div>
   </div>
-
-  
+  <h3>Wat voor huisdier zoek je?</h3>
+  <div class="mb-3">
+    <label>
+      <input type="radio" name="pet_cat" value="cat">
+      <img src="img/cat.png" height="100px">
+    </label>
+    <label>
+      <input type="radio" name="pet_cat" value="dog">
+      <img src="img/dog.png" height="100px">
+    </label>
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<style>
+  /* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #078080;
+  background-color: #078080;
+  padding: 10px;
+}
+</style>
