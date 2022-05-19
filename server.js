@@ -1,7 +1,7 @@
-var express = require("express");
-var app = express();
+let express = require("express");
+let app = express();
 const port = process.env.PORT || 3000;
-var bodyParser = require('body-parser')
+let bodyParser = require('body-parser')
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -10,18 +10,20 @@ app.set("view engine", "ejs");
 
 // index page
 app.get("/", function (req, res) {
-  res.render("pages/index");
+  res.render("pages/gettingstarted");
 });
 
 // about page
 app.get("/getting-started", function (req, res) {
-  var tagline =
+  let tagline =
     "No programming concept is complete without a cute animal mascot.";
 
-  res.render("pages/onboarding", {
+  res.render("pages/gettingstarted", {
     tagline: tagline,
   });
 });
+
+// TODO 404 pagina renderen
 
 app.use(express.static(__dirname + "/assets"));
 // parse application/x-www-form-urlencoded
