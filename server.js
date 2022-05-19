@@ -1,7 +1,9 @@
 let express = require("express");
 let app = express();
 const port = process.env.PORT || 3000;
-let bodyParser = require('body-parser')
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -24,12 +26,10 @@ app.get("/getting-started", function (req, res) {
 });
 
 // TODO 404 pagina renderen
+// TODO admin Vkrsx8lQ9Wo9q0Fo
 
-app.use(express.static(__dirname + "/assets"));
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+
 
 // parse application/json
-app.use(bodyParser.json())
 app.listen(port);
 console.log("Server is listening on port 3000");

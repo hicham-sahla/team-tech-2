@@ -1,3 +1,4 @@
+// TODO JS minifyer toevoegen GULP/Webpack??
 function preview() {
   frame.src = URL.createObjectURL(event.target.files[0]);
 }

@@ -1,11 +1,8 @@
+ /* TODO SCSS webpack toevoegen */
 #frame {
   margin-top: 10px;
   height: 150px;
   width: auto;
-}
-
-body {
-  background-color: red;
 }
 
 /* HIDE RADIO */
