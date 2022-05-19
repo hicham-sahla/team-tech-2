@@ -29,7 +29,7 @@
   <!-- TODO API voor plaatsnamen ophalen -->
   <div class="mb-3">
     <select class="form-select" required aria-label="Default select">
-      <option selected>Selecteer je provincie</option>
+      <option value selected>Selecteer je provincie</option>
       <option value="1">Noord-Holland</option>
       <option value="2">Zuid-Holland</option>
       <option value="3">Utrecht</option>
@@ -38,7 +38,7 @@
   <!-- TODO beschikbare plaatsnamen baseren op geselecteerde provincie -->
   <div class="mb-3">
     <select class="form-select" required aria-label="Default select">
-      <option selected>Selecteer je woonplaats</option>
+      <option value="" selected>Selecteer je woonplaats</option>
       <option value="1">Amsterdam</option>
       <option value="2">Haarlem</option>
       <option value="3">Utrecht</option>
@@ -57,12 +57,12 @@
   <div class="mb-3">
     <label>
       <input type="radio" name="pet_cat" value="cat">
-      <img src="assets/img/cat.png" height="100px">
+      <img src="assets/img/cat.png" height="100px" alt="Kat categorie">
     </label>
     <label>
       <input type="radio" name="pet_cat" value="dog">
-      <img src="assets/img/dog.png" height="100px">
+      <img src="assets/img/dog.png" height="100px" alt="Hond categorie">
     </label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Profiel aanmaken</button>
 </form>

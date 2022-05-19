@@ -1,7 +1,14 @@
-let express = require("express");
-let app = express();
-const port = process.env.PORT || 3000;
+require('dotenv').config();
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
 const path = require("path");
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbConn');
+
+
+// Connect to MongoDB
+connectDB();
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -27,9 +34,10 @@ app.get("/getting-started", function (req, res) {
 
 // TODO 404 pagina renderen
 // TODO admin Vkrsx8lQ9Wo9q0Fo
+// TODO private ENV file maken voor production
 
 
-
-// parse application/json
-app.listen(port);
-console.log("Server is listening on port 3000");
+mongoose.connection.once('open', () => {
+  console.log('Connected to MongoDB');
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});console.log("Server is listening on port 3000");
