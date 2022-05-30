@@ -4,7 +4,7 @@ const user_index = (req, res) => {
   User.find()
     .sort({ createdAt: -1 })
     .then((result) => {
-      res.render("pages/users", {
+      res.render("users/index", {
         title: "Bekijk gebruikers in je buurt",
         users: result,
       });
@@ -18,7 +18,7 @@ const user_details = (req, res) => {
   const id = req.params.id;
   User.findById(id)
     .then(result => {
-      res.render('single/user', {user: result, title: 'Gebruiker details'});
+      res.render('users/details', {user: result, title: 'Gebruiker details'});
     })
     .catch(err => {
       console.log(err);
@@ -26,7 +26,7 @@ const user_details = (req, res) => {
 }
 
 const user_create_get = (req, res) => {
-  res.render("pages/usersCreate", {
+  res.render("users/create", {
     title: "Vul je gegevens in",
   });
 }

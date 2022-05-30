@@ -26,7 +26,6 @@ app.use((req, res) => {
   res.status(404).render("pages/404", { title: "404" });
 });
 
-// TODO 404 pagina renderen
 // TODO private ENV file maken voor production via Heroku
 // TODO weerapi uitladen gebaseerd op provincie
 // TODO Profiel bekijken en wijzigen van data toevoegen
