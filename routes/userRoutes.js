@@ -3,7 +3,7 @@ const userController = require('../controllers/userController');
 
 const router = express.Router();
 
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.redirect("/users/create");
 });
 
