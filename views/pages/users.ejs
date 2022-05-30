@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main class="d-flex justify-content-center">
+      <section class="row">
+        <% if (users.length > 0) { %> <% users.forEach(user => { %>
+        <div class="col-12">
+          <a href="/users/<%= user._id %> "><%= user.firstName %> <%= user.lastName %></a>
+        </div>
+        <% }); %> <% } else { %>
+
+        <div class="col-12">No Users to be shown</div>
+
+        <% } %>
+      </section>
+    </main>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>

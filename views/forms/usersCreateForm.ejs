@@ -1,0 +1,60 @@
+<!-- TODO validation toevoegen -->
+<!-- TODO Juiste spacing toevoegen -->
+<!-- TODO onnodige divs weghalen beter groeperen -->
+<form action="/users" method="POST">
+  <div class="mb-3">
+    <div class="form-floating mb-3">
+      <input type="text" required class="form-control" id="firstName" name="firstName" placeholder="Voornaam">
+      <label for="firstName">Voornaam</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" required class="form-control" id="lastName" name="lastName" placeholder="Achternaam">
+      <label for="lastName">Achternaam</label>
+    </div>
+    <label for="birthDate" class="mt-3">Geboortedatum</label>
+    <input id="birthDate" class="form-control" type="date" name="birthDate" />
+  </div>
+  <label for="personalColor">Kies je favoriete kleur</label>
+  <input type="color" id="personalColor" name="personalColor"
+         value="#e66465">
+  <h3>Waar hoop je iemand te vinden</h3>
+  <!-- TODO API voor plaatsnamen ophalen -->
+  <div class="mb-3">
+    <select class="form-select" required aria-label="Default select" name="province">
+      <option value selected>Selecteer je provincie</option>
+      <option value="noord-holland">Noord-Holland</option>
+      <option value="zuid-holland">Zuid-Holland</option>
+      <option value="utrecht">Utrecht</option>
+    </select>
+  </div>
+  <!-- TODO beschikbare plaatsnamen baseren op geselecteerde provincie -->
+  <div class="mb-3">
+    <select class="form-select" required aria-label="Default select" name="city" >
+      <option value="" selected>Selecteer je woonplaats</option>
+      <option value="amsterdam">Amsterdam</option>
+      <option value="haarlem">Haarlem</option>
+      <option value="utrecht">Utrecht</option>
+    </select>
+  </div>
+  <div class="mb-3">
+  </div>
+  <h3>Vertel wat meer over je zelf </h3>
+  <div class="mb-3">
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Vertel wat over je passies of interesses" id="passion" name="bio" ></textarea>
+      <label for="passion">Je passie</label>
+    </div>
+  </div>
+  <h3>Wat voor huisdier zoek je?</h3>
+  <div class="mb-3">
+    <label>
+      <input type="radio" name="petCategory" value="cat">
+      <img src="../assets/img/cat.png" height="100px" alt="Kat categorie">
+    </label>
+    <label>
+      <input type="radio" name="petCategory" value="dog">
+      <img src="../assets/img/dog.png" height="100px" alt="Hond categorie">
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Profiel aanmaken</button>
+</form>

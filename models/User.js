@@ -20,19 +20,15 @@ const userSchema = new Schema({
   },
   province: {
     type: String,
-    required: true,
   },
   city: {
     type: String,
-    required: true,
   },
   bio: {
     type: String,
-    required: true,
   },
   petCategory: {
     type: String,
-    required: true,
   },
 }, {timestamps: true});
 

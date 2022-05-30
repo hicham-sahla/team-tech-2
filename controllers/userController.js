@@ -1,77 +1,64 @@
-const User = require("../models/User");
+const User = require('../models/user');
 
-const getAllUsers = async (req, res) => {
-  const users = await user.find();
-  if (!users) return res.status(204).json({ message: "No users found." });
-  res.json(users);
-};
-
-const createNewUser = async (req, res) => {
-  if (!req?.body?.firstname || !req?.body?.lastname) {
-    return res
-      .status(400)
-      .json({ message: "First and last names are required" });
-  }
-  try {
-    const result = await user.create({
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
+const user_index = (req, res) => {
+  User.find()
+    .sort({ createdAt: -1 })
+    .then((result) => {
+      res.render("pages/users", {
+        title: "Bekijk gebruikers in je buurt",
+        users: result,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
+}
 
-    res.status(201).json(result);
-  } catch (err) {
-    console.error(err);
-  }
-};
+const user_details = (req, res) => {
+  const id = req.params.id;
+  User.findById(id)
+    .then(result => {
+      res.render('single/user', {user: result, title: 'Gebruiker details'});
+    })
+    .catch(err => {
+      console.log(err);
+    })
+}
 
-const updateUser = async (req, res) => {
-  if (!req?.body?.id) {
-    return res.status(400).json({ message: "ID parameter is required." });
-  }
+const user_create_get = (req, res) => {
+  res.render("pages/usersCreate", {
+    title: "Vul je gegevens in",
+  });
+}
 
-  const user = await User.findOne({ _id: req.body.id }).exec();
-  if (!user) {
-    return res
-      .status(204)
-      .json({ message: `No user matches ID ${req.body.id}.` });
-  }
-  if (req.body?.firstname) user.firstname = req.body.firstname;
-  if (req.body?.lastname) user.lastname = req.body.lastname;
-  const result = await user.save();
-  res.json(result);
-};
+const user_create_post = (req, res) => {
+  const user = new User(req.body);
 
-const deleteUser = async (req, res) => {
-  if (!req?.body?.id)
-    return res.status(400).json({ message: "user ID required." });
+  user.save()
+  .then(result => {
+    res.redirect('/users');
+  })
+  .catch(err => {
+    console.log(err);
+  });
+}
 
-  const user = await User.findOne({ _id: req.body.id }).exec();
-  if (!user) {
-    return res
-      .status(204)
-      .json({ message: `No user matches ID ${req.body.id}.` });
-  }
-  const result = await user.deleteOne(); //{ _id: req.body.id }
-  res.json(result);
-};
-
-const getUser = async (req, res) => {
-  if (!req?.params?.id)
-    return res.status(400).json({ message: "User ID required." });
-
-  const user = await User.findOne({ _id: req.params.id }).exec();
-  if (!user) {
-    return res
-      .status(204)
-      .json({ message: `No user matches ID ${req.params.id}.` });
-  }
-  res.json(user);
-};
+const user_delete = (req, res) => {
+  const id = req.params.id;
+  
+  User.findByIdAndDelete(id)
+    .then(result => {
+      res.json({ redirect: '/users' });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
 
 module.exports = {
-  getAllUsers,
-  createNewUser,
-  updateUser,
-  deleteUser,
-  getUser,
-};
+  user_index, 
+  user_details, 
+  user_create_get, 
+  user_create_post, 
+  user_delete
+}
