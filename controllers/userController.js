@@ -21,7 +21,7 @@ const user_details = (req, res) => {
       res.render('users/details', {user: result, title: 'Gebruiker details'});
     })
     .catch(err => {
-      console.log(err);
+      res.status(404).render("pages/404", { title: "Gebruiker niet gevonden" });
     })
 }
 
