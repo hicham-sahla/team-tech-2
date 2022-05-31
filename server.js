@@ -5,21 +5,24 @@ const PORT = process.env.PORT || 3000;
 const path = require("path");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
-
-const userRoutes = require('./routes/userRoutes')
+const userRoutes = require("./routes/userRoutes");
 // Connect to MongoDB
 connectDB();
 
 // middleware & static files
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
+);
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
 
 // user routes
 app.use(userRoutes);
-
 
 // 404 page
 app.use((req, res) => {
