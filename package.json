@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss-watch": "sass --no-source-map --watch assets/scss/main.scss public/dist/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "mongoose": "^6.3.3",
-    "sass": "^1.51.0"
+    "sass": "^1.52.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
