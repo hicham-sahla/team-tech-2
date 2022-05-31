@@ -29,14 +29,8 @@ app.use((req, res) => {
   res.status(404).render("pages/404", { title: "404" });
 });
 
-// TODO private ENV file maken voor production via Heroku
 // TODO weerapi uitladen gebaseerd op provincie
-// TODO Profiel bekijken en wijzigen van data toevoegen
-// TODO profielen van andere bekijken
 // TODO Color api uitladen als onderscheiden van  https://www.thecolorapi.com/
-// TODO Query aanmaken om te filteren op juiste posts collection.find mongoDB doc
-// TODO add filter to matching page
-// TODO Delete unused packages
 // TODO fall back functies creeëren
 
 // Check if the connection to the database can be established
