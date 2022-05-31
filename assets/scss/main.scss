@@ -1,33 +1,7 @@
 @import 'variables';
+@import 'general';
+@import 'form';
+@import 'users';
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-
-#users-create {
-  background-color: $secondary;
-  #frame {
-    margin-top: 10px;
-    height: 150px;
-    width: auto;
-  }
-
-  /* HIDE RADIO */
-  [type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* IMAGE STYLES */
-  [type="radio"] + img {
-    cursor: pointer;
-  }
-
-  /* CHECKED STYLES */
-  [type="radio"]:checked + img {
-    outline: 2px solid $primary;
-    background-color: $primary;
-    padding: 10px;
-  }
-}
+// import bootstrap 5 files
+@import '../../node_modules/bootstrap/scss/bootstrap';

@@ -15,6 +15,12 @@ $ npm install
 
 # Start up project locally on port 3000 
 $ npm start
+
+# scripts compile SASS
+$ npm run scss-watch
+
+# scripts run both SASS compiler and Nodemon
+$ npm run dev
 ```
 
 ## Resources 

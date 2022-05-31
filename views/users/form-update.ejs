@@ -1,0 +1,122 @@
+<form action="/users" method="POST">
+  <fieldset>
+    <h3>Pas je gegevens aan</h3>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        placeholder="Voornaam"
+        value="<%= user.firstName %>"
+      />
+      <label for="firstName">Voornaam</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="lastName"
+        name="lastName"
+        placeholder="Achternaam"
+        value="<%= user.lastName %>"
+      />
+      <label for="lastName">Achternaam</label>
+    </div>
+    <label for="birthDate" class="mt-3 mb-2">Geboortedatum</label>
+    <input
+      id="birthDate"
+      class="form-control"
+      type="date"
+      name="birthDate"
+      value="<%= user.birthDate.toISOString().slice(0, 10); %>"
+    />
+  </fieldset>
+  <fieldset>
+    <h3><label for="personalColor">Wat is je favoriete kleur?</label></h3>
+    <input
+      type="color"
+      id="personalColor"
+      name="personalColor"
+      value="<%= user.personalColor %>"
+    />
+  </fieldset>
+
+  <fieldset>
+    <h3>Waar hoop je iemand te vinden</h3>
+    <select
+      class="form-select"
+      required
+      aria-label="Default select"
+      name="province"
+      value="<%= user.province %>"
+    >
+      <option value="noord-holland" <% if (user.province == "noord-holland") { %>
+        selected
+       <% } %>  >Noord-Holland</option>
+      <option value="zuid-holland" <% if (user.province == "zuid-holland") { %>
+        selected
+       <% } %> >Zuid-Holland</option>
+      <option value="utrecht" <% if (user.province == "utrecht") { %>
+        selected
+       <% } %> >Utrecht</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <select
+      class="form-select"
+      required
+      aria-label="Default select"
+      name="city"
+    >
+      <option value="amsterdam" <% if (user.city == "amsterdam") { %>
+        selected
+       <% } %>>Amsterdam</option>
+      <option value="haarlem" <% if (user.city == "haarlem") { %>
+        selected
+       <% } %>>Haarlem</option>
+      <option value="utrecht" <% if (user.city == "utrecht") { %>
+        selected
+       <% } %>>Utrecht</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <h3>Vertel wat meer over je zelf</h3>
+    <div class="form-floating">
+      <textarea
+        rows="4"
+        class="form-control"
+        placeholder="<%= user.bio %>"
+        id="passion"
+        name="bio"
+      ><%= user.bio %></textarea>
+      <label for="passion">Je passie</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <h3>Wat voor huisdier heb je?</h3>
+    <label>
+      <input
+        type="radio"
+        name="petCategory"
+        value="cat"
+        <% if (user.petCategory == "cat") { %>
+          checked="checked"         
+          <% } %>
+      />
+      <img src="../dist/img/cat.png" alt="Kat categorie" />
+    </label>
+    <label>
+      <input type="radio" name="petCategory" value="dog" 
+      <% if (user.petCategory == "dog") { %>
+        checked="checked"       
+        <% } %> />
+      <img src="../dist/img/dog.png" alt="Hond categorie" />
+    </label>
+  </fieldset>
+  <fieldset class="d-grid">
+    <button type="submit" class="btn btn-primary">Profiel updaten</button>
+  </fieldset>
+</form>

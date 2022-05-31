@@ -1,0 +1,98 @@
+<!-- TODO validation toevoegen =  een fallback functie -->
+<!-- TODO Juiste spacing toevoegen -->
+<!-- TODO onnodige divs weghalen beter groeperen -->
+<form action="/users" method="POST">
+  <fieldset>
+    <h2>Vertel ons wat meer over je zelf</h2>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        placeholder="Voornaam"
+      />
+      <label for="firstName">Voornaam</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="lastName"
+        name="lastName"
+        placeholder="Achternaam"
+      />
+      <label for="lastName">Achternaam</label>
+    </div>
+    <label for="birthDate" class="mt-3 mb-2">Geboortedatum</label>
+    <input id="birthDate" class="form-control" type="date" name="birthDate" />
+  </fieldset>
+  <fieldset>
+    <h3><label for="personalColor">Wat is je favoriete kleur?</label></h3>
+    <input
+      type="color"
+      id="personalColor"
+      name="personalColor"
+      value="#6246ea"
+    />
+  </fieldset>
+
+  <!-- TODO API voor plaatsnamen ophalen -->
+  <fieldset>
+    <h3>Waar hoop je iemand te vinden</h3>
+    <select
+      class="form-select"
+      required
+      aria-label="Default select"
+      name="province"
+    >
+      <option value selected>Selecteer je provincie</option>
+      <option value="noord-holland">Noord-Holland</option>
+      <option value="zuid-holland">Zuid-Holland</option>
+      <option value="utrecht">Utrecht</option>
+    </select>
+  </fieldset>
+  <!-- TODO beschikbare plaatsnamen baseren op geselecteerde provincie -->
+  <fieldset>
+    <select
+      class="form-select"
+      required
+      aria-label="Default select"
+      name="city"
+    >
+      <option value="" selected>Selecteer je woonplaats</option>
+      <option value="amsterdam">Amsterdam</option>
+      <option value="haarlem">Haarlem</option>
+      <option value="utrecht">Utrecht</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <h3>Vertel wat meer over je zelf</h3>
+    <div class="form-floating">
+      <textarea
+        rows="4"
+        class="form-control"
+        placeholder="Vertel wat over je passies of interesses"
+        id="passion"
+        name="bio"
+      ></textarea>
+      <label for="passion">Je passie</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <h3>Wat voor huisdier heb je?</h3>
+    <label>
+      <input type="radio" name="petCategory" value="cat" />
+      <img src="../dist/img/cat.png" alt="Kat categorie" />
+    </label>
+    <label>
+      <input type="radio" name="petCategory" value="dog" />
+      <img src="../dist/img/dog.png" alt="Hond categorie" />
+    </label>
+  </fieldset>
+  <fieldset class="d-grid">
+    <button type="submit" class="btn btn-primary">Profiel aanmaken</button>
+  </fieldset>
+</form>

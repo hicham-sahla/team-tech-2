@@ -3,15 +3,31 @@
   <head>
     <%- include('../partials/head'); %>
   </head>
-  <body class="container">
+  <body class="container" id="users-index">
     <header><%- include('../partials/header'); %></header>
 
-    <main class="d-flex justify-content-center">
-      <section class="row">
+    <main>
+      <section class="row d-flex justify-content-center">
         <% if (users.length > 0) { %> <% users.forEach(user => { %>
-        <div class="col-12">
-          <a href="/users/<%= user._id %> "><%= user.firstName %> <%= user.lastName %></a>
-        </div>
+
+        <article class="col-3 m-3 box card text-center shadow p-3">
+          <div class="card-header" style="background-color: <%= user.personalColor %>;" >
+            <img
+              src="../dist/img/<% if (user.petCategory == 'cat'){ %>cat<% } else { %>dog<% } %>-icon.png"
+              alt="huisdier icon"
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= user.firstName %> <%= user.lastName %>
+            </h5>
+            <p class="card-text"><%= user.bio %></p>
+            <a href="/users/<%= user._id %> " class="btn btn-primary"
+              >Bekijk profiel</a
+            >
+          </div>
+          <div class="card-footer text-muted">2 days ago</div>
+        </article>
         <% }); %> <% } else { %>
 
         <div class="col-12">No Users to be shown</div>
