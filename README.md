@@ -6,6 +6,8 @@ Ben je altijd al opzoek geweest naar een mede dierenliefhebber. Heb je altijd al
 - Gebruik een interactieve map om andere gebruikers te zien
 - Creeër een profiel, wij zoeken iemand die perfect bij je past
 
+Na het aanmaken van een profiel zie je alle andere profielen. Hierbij zie je iemand zijn naam, huisdier en bio. Wil je je hond uitlaten met iemand maar weet je niet hoe warm het is? Treur niet gebaseerd op je geolocatie wordt live opgehaald hoe warm het is in jouw gemeente.
+
 ## Installation
 
 Om dit project te kunnen installeren heb je Node en NPM nodig.
@@ -22,6 +24,14 @@ $ npm run scss-watch
 # scripts run both SASS compiler and Nodemon
 $ npm run dev
 ```
+## Database
+De database structuur wordt bepaald door de models. Het handmatig opzetten van de database is daarom niet nodig!
+
+## Gebruik van eigen database
+Wil je het product zelf opzetten met je eigen database? Neem de env file over en laat "example" weg. Vul de juiste variabelen in.
+
+## OpenweatherAPI
+Wil je gebruik maken van je eigen openweatherAPI. De API key kan je eenvoudig zelf aanpassen in het volgende bestand public/dist/js/weatherapi.js
 
 ## Resources 
 
@@ -32,3 +42,11 @@ Tijdens het project heb ik meerdere resources en services gebruikt die het mogel
 - [Express framework](https://expressjs.com/)
 - [EJS](https://ejs.co/)
 - [openweathermap API](https://openweathermap.org/)
+
+## License
+© Hicham Sahla
+Licensed under the MIT License
+
+## Contact
+Naam: Hicham Sahla
+Email: hicham.sahla@hva.nl
