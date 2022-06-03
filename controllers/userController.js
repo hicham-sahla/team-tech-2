@@ -55,20 +55,9 @@ const user_delete = (req, res) => {
       console.log(err);
     });
 };
-// TODO Werkt nog niet voegt extra document toe in plaats van update
 // const user_update = (req, res) => {
-//   const id = req.params.id;
-//   const update = {
-//     firstName: req.body.firstName,
-//     lastName: req.body.lastName,
-//     birthDate: req.body.birthDate,
-//     personalColor: req.body.personalColor,
-//     province: req.body.province,
-//     city: req.body.city,
-//     petCategory: req.body.petCategory,
-//   };
-//   const filter = { _id: req.user.id };
-//   User.findOneAndUpdate(filter, update)
+
+//   User.findOneAndUpdate()
 //     .then((result) => {
 //       res.redirect("/users");
 //     })

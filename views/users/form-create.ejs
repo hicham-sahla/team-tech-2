@@ -27,14 +27,18 @@
     <label for="birthDate" class="mt-3 mb-2">Geboortedatum</label>
     <input id="birthDate" class="form-control" type="date" name="birthDate" />
   </fieldset>
+     
+  
   <fieldset>
-    <h3><label for="personalColor">Wat is je favoriete kleur?</label></h3>
-    <input
-      type="color"
+    <label id="personalColorLabel" for="personalColor" class="mx-3">Wat is je favoriete kleur?</label>
+    <noscript>
+      <input
+      type="text"
       id="personalColor"
       name="personalColor"
       value="#6246ea"
     />
+    </noscript>
   </fieldset>
 
   <!-- TODO API voor plaatsnamen ophalen -->
@@ -58,6 +62,7 @@
       class="form-select"
       required
       aria-label="Default select"
+      id="cities"
       name="city"
     >
       <option value="" selected>Selecteer je woonplaats</option>
@@ -94,3 +99,9 @@
     <button type="submit" class="btn btn-primary">Profiel aanmaken</button>
   </fieldset>
 </form>
+<section>
+  <h2>Noord-Holland, NL</h2>
+  <ul id="cities">
+  </ul>
+</section>
+
