@@ -1,6 +1,6 @@
-var my_elem = document.getElementById("personalColorLabel");
+let my_elem = document.getElementById("personalColorLabel");
 
-var input = document.createElement("input");
+let input = document.createElement("input");
 input.type = "color";
 input.name = "personalColor";
 input.id = "personalColor";

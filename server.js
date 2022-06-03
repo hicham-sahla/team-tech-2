@@ -6,6 +6,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
 const userRoutes = require("./routes/userRoutes");
+
 // Connect to MongoDB
 connectDB();
 
@@ -28,10 +29,6 @@ app.use(userRoutes);
 app.use((req, res) => {
   res.status(404).render("pages/404", { title: "404" });
 });
-
-// TODO weerapi uitladen gebaseerd op provincie
-// TODO Color api uitladen als onderscheiden van  https://www.thecolorapi.com/
-// TODO fall back functies creeëren
 
 // Check if the connection to the database can be established
 mongoose.connection.once("open", () => {

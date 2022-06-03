@@ -7,11 +7,21 @@
     <header><%- include('../partials/header'); %></header>
 
     <main>
+      <section class="text-center">
+
+        <p id="temperature"></>
+        <p id="location"></p>
+      </section>
+    
+      
       <section class="row d-flex justify-content-center">
         <% if (users.length > 0) { %> <% users.forEach(user => { %>
 
         <article class="col-3 m-3 box card text-center shadow p-3">
-          <div class="card-header" style="background-color: <%= user.personalColor %>;" >
+          <div
+            class="card-header"
+            style="background-color: <%= user.personalColor %>"
+          >
             <img
               src="../dist/img/<% if (user.petCategory == 'cat'){ %>cat<% } else { %>dog<% } %>-icon.png"
               alt="huisdier icon"
@@ -37,5 +47,6 @@
     </main>
 
     <footer><%- include('../partials/footer'); %></footer>
+    <script src="/dist/js/weatherapi.js"></script>
   </body>
 </html>
