@@ -1,3 +1,4 @@
+// Progressive web enhancement. When JavaScript is disabled this function doesnt work and the noscript tag will be shown with a different input field
 let my_elem = document.getElementById("personalColorLabel");
 
 let input = document.createElement("input");
