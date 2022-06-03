@@ -31,3 +31,4 @@ Tijdens het project heb ik meerdere resources en services gebruikt die het mogel
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Express framework](https://expressjs.com/)
 - [EJS](https://ejs.co/)
+- [openweathermap API](https://openweathermap.org/)
