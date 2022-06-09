@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'home';
 @import "breakpoints";
 
 * {
@@ -22,4 +23,8 @@ body {
     background-color: $body-bg;
     font-family: $font-stack;
     color: $white;
+}
+
+li {
+    list-style: none;
 }
