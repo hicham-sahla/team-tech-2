@@ -6,6 +6,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
 const userRoutes = require("./routes/userRoutes");
+const serieRoutes = require("./routes/serieRoutes");
 
 // Connect to MongoDB
 connectDB();
@@ -24,6 +25,7 @@ app.set("view engine", "ejs");
 
 // user routes
 app.use(userRoutes);
+app.use(serieRoutes);
 
 // 404 page
 app.use((req, res) => {
