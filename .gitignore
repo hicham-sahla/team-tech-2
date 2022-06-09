@@ -102,7 +102,3 @@ typings/
 
 # TernJS port file
 .tern-port
-
-.vscode
-
-.DS_Store
