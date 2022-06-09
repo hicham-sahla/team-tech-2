@@ -1,0 +1,85 @@
+h1 {
+    @include font26;
+    margin-bottom: 30px;
+}
+
+.body-series {
+    & > button {
+        @include btn-1;
+        display: flex;
+        padding: 10px 20px;
+        margin: 50px 0px 30px auto;
+        width: fit-content;
+        border-radius: 10px;
+        font-weight: normal;
+    }
+}
+
+.user-profile {
+    display: flex;
+    justify-content: flex-end;
+    color: $white;
+
+    img {
+        order: -1;
+        width: 70px;
+        border-radius: 50%;
+    }
+
+    section {
+        @include flex(row, 20px);
+        align-items: center;
+
+        h2 {
+            @include font16;
+            font-weight: normal;
+        }
+    }
+}
+
+.main-series {
+    @include grid(1fr 1fr, 40px 20px);
+
+    img {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 20px;
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+
+    article {
+        position: relative;
+    }
+
+    form {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    h3 {
+        @include font16;
+    }
+}
+
+.heart-default {
+    display: block;
+    background: url(../../dist/img/heart-default.svg) center center no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 45px;
+    transition: .4s;
+}
+
+.heart-add:hover {
+    background: url(img/heart-hover.svg) center center no-repeat;
+}
+
+.heart-add:active {
+    background: url(img/heart-active.svg) center center no-repeat;
+}

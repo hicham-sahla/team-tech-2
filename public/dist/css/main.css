@@ -1,3 +1,7 @@
+.body-home {
+  padding: 0px;
+}
+
 .header-home {
   position: relative;
   height: 400px;
@@ -109,6 +113,112 @@
   color: white;
 }
 
+h1 {
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 30px;
+}
+
+.body-series > button {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: #4479a4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 20px;
+  margin: 50px 0px 30px auto;
+  width: fit-content;
+  border-radius: 10px;
+  font-weight: normal;
+}
+.body-series > button:hover {
+  background-color: #335b7b;
+  color: white;
+}
+.body-series > button:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.body-series > button:active {
+  background-color: #223c52;
+  color: white;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+.user-profile img {
+  order: -1;
+  width: 70px;
+  border-radius: 50%;
+}
+.user-profile section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.user-profile section h2 {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: normal;
+}
+
+.main-series {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+}
+.main-series img {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+.main-series button {
+  background: none;
+  border: none;
+}
+.main-series article {
+  position: relative;
+}
+.main-series form {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.main-series h3 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.heart-default {
+  display: block;
+  background: url(../../dist/img/heart-default.svg) center center no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 45px;
+  transition: 0.4s;
+}
+
+.heart-add:hover {
+  background: url(img/heart-hover.svg) center center no-repeat;
+}
+
+.heart-add:active {
+  background: url(img/heart-active.svg) center center no-repeat;
+}
+
 @media (min-width: 576px) {
   .header-home {
     width: 500px;
@@ -116,6 +226,11 @@
   }
 
   .main-home {
+    width: 500px;
+    margin: auto;
+  }
+
+  .body-series {
     width: 500px;
     margin: auto;
   }
@@ -139,6 +254,16 @@
   .header-genres {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .user-profile section h2 {
+    font-size: 26px;
+    line-height: 31px;
   }
 
   .body-home {
@@ -177,6 +302,35 @@
   .main-home button:last-of-type {
     width: fit-content;
   }
+
+  .body-series {
+    width: 100%;
+    padding: 50px 150px;
+  }
+  .body-series > button {
+    padding: 25px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .main-series {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .main-series h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .user-profile img {
+    width: 100px;
+  }
+
+  .heart-default {
+    height: 50px;
+    width: 57px;
+  }
 }
 * {
   box-sizing: border-box;
@@ -198,9 +352,14 @@
 body {
   background-color: #1a1a1a;
   font-family: "Poppins", sans-serif;
+  padding: 20px;
   color: white;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

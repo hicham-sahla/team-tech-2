@@ -8,6 +8,11 @@
     .main-home {
         @include max500;
     }
+    // TODO: kijken of apart max500 of body
+
+    .body-series {
+        @include max500;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -16,6 +21,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     // Font
+    // Home
     .main-home h1 {
         @include font42;
     }
@@ -30,6 +36,15 @@
 
     .header-genres {
         @include font18;
+    }
+
+    // Series
+    h1 {
+        @include font42;
+    }
+
+    .user-profile section h2 {
+        @include font26;
     }
 
     // Home
@@ -72,6 +87,35 @@
                 width: fit-content;
             }
         }
+    }
+
+    // Series
+    .body-series {
+        width: 100%;
+        padding: 50px 150px;
+
+        & > button {
+            padding: 25px 30px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .main-series {
+        @include grid(1fr 1fr 1fr 1fr, 30px);
+
+        h3 {
+            @include font18;
+        }
+    }
+
+    .user-profile img {
+        width: 100px;
+    }
+
+    .heart-default {
+        height: 50px;
+        width: 57px;
     }
 
 

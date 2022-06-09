@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'home';
+@import 'series';
 @import "breakpoints";
 
 * {
@@ -22,9 +23,14 @@
 body {
     background-color: $body-bg;
     font-family: $font-stack;
+    padding: 20px;
     color: $white;
 }
 
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }

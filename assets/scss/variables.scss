@@ -41,6 +41,11 @@ $trans4: .4s;
   line-height: 30px;
 }
 
+@mixin font16 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
 @mixin font14 {
   font-size: 14px;
   line-height: 23px;
@@ -115,4 +120,10 @@ $trans4: .4s;
   display: grid;
   grid-template-columns: $fr;
   gap: $gap; 
+}
+
+@mixin flex($direction, $flex-gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $flex-gap;
 }

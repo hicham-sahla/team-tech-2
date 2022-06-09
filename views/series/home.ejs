@@ -3,21 +3,32 @@
 <head>
   <%- include('../partials/head'); %>
 </head>
-<body class="container" id="users-index">
+<body class="body-home">
+    <header class="header-home">
+        <div>
+            <h2>Tomorrow</h2>
 
-<header>
-  <%- include('../partials/header'); %>
-</header>
+            <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
+            <ul class="header-genres">
+                <li>drama</li>
+                <li>scifi-fantasy</li>
+                <li>action-adventure</li>
+            </ul>
 
-<main class="row d-flex justify-content-center">
-  <section class="col-sm-8 py-4">
-    <%- include('form-create'); %>
-  </section>
-</main>
+        </div>
 
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
-<script src="/dist/js/scripts.js"></script>
+        <!-- Toon hier de eerste serie van de database -->
+        <img src="../dist/img/tomorrow.jpeg" alt="Tomorrow">
+        
+        <div class="overlay"></div>
+    </header>
+    <main class="main-home">
+        <h1>Have all your series in one place</h1>
+        <p>Make an account to start your journey to have all your series in one place</p>
+
+        <button>Sign in</button>
+        <button>Sign up</button>
+    </main>
+    <script src="/dist/js/scripts.js"></script>
 </body>
 </html>
