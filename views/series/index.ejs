@@ -3,76 +3,75 @@
 <head>
   <%- include('../partials/head'); %>
 </head>
-<body class="body-series">
-    <h1>Choose Series</h1>
+<body>
+    <h1>Sign in</h1>
 
-    <!-- Als de gebruiker een account heeft, wordt de avatar en username getoond -->
-    <a class="user-profile" href="">
-        <section>
-            <h2>Xiao xiao</h2>
-            <img src="../dist/img/user-1.jpg" alt="Xiao xiao">
-        </section>
-    </a>
+    <main>
+        <form action="congrats.html">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="ARMY">
 
-    <button>Add Series</button>
+            <fieldset class="e-p-flex"> 
+                <div class="f-clmn">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="army@bighit.com" required>
+                </div>
+                
+                <div class="f-clmn">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+82 123 456 78" required>
+                    <!-- Bron: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel -->
+                </div>
+            </fieldset>
+            
+            <label for="ch-member">Choose member</label>
+            <select name="ch-member" id="ch-member">
+                <option value="f-rm">RM</option>
+                <option value="f-jin">Jin</option>
+                <option value="f-suga">Suga</option>
+                <option value="f-jh">j-hope</option>
+                <option value="f-jimin">Jimin</option>
+                <option value="f-v">V</option>
+                <option value="f-jk">Jungkook</option>
+            </select>
 
-    <main class="main-series">
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
+            <fieldset class="ch-package">
+                <legend>Choose package</legend>
+                <div class="inline">
+                    <input type="radio" id="small" value="small" name="pack-choices">
+                    <label for="small">Small: $840,-</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" id="medium" value="medium" name="pack-choices">
+                    <label for="medium">Medium: $1260,-</label>
+                </div>
+
+                <div class="inline">
+                    <input type="radio" id="large" value="large" name="pack-choices">
+                    <label for="large">Large: $1580,-</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="ch-date">
+                <legend>Choose date</legend>
+                <div class="inline">
+                    <input type="radio" id="feb" value="feb" name="pack-date">
+                    <label for="feb">3-2-2021</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" id="ap" value="ap" name="pack-date">
+                    <label for="ap">23-4-2021</label>
+                </div>
+
+                <div class="inline">
+                    <input type="radio" id="jun" value="jun" name="pack-date">
+                    <label for="jun">15-6-2021</label>
+                </div>
+            </fieldset>
+            <button>Submit</button>
+        </form>
     </main>
+
     <script src="/dist/js/scripts.js"></script>
 </body>
 </html>

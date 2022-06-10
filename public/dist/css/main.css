@@ -153,14 +153,16 @@ h1 {
 }
 
 .user-profile {
-  display: flex;
-  justify-content: flex-end;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
   color: white;
 }
 .user-profile img {
   order: -1;
   width: 70px;
   border-radius: 50%;
+  transition: 0.4s;
 }
 .user-profile section {
   display: flex;
@@ -172,6 +174,13 @@ h1 {
   font-size: 16px;
   line-height: 28px;
   font-weight: normal;
+  transition: 0.4s;
+}
+.user-profile:hover img {
+  transform: scale(1.1);
+}
+.user-profile:hover h2 {
+  color: #95c3ea;
 }
 
 .main-series {
@@ -209,14 +218,19 @@ h1 {
   height: 40px;
   width: 45px;
   transition: 0.4s;
+  cursor: pointer;
 }
 
-.heart-add:hover {
-  background: url(img/heart-hover.svg) center center no-repeat;
+.heart-default:hover {
+  background: url(../../dist/img/heart-hover.svg) center center no-repeat;
 }
 
-.heart-add:active {
-  background: url(img/heart-active.svg) center center no-repeat;
+.heart-default:active {
+  background: url(../../dist/img/heart-active.svg) center center no-repeat;
+}
+
+.heart-added {
+  background: url(../../dist/img/heart-added.svg) center center no-repeat;
 }
 
 @media (min-width: 576px) {

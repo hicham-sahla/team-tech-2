@@ -16,14 +16,16 @@ h1 {
 }
 
 .user-profile {
-    display: flex;
-    justify-content: flex-end;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
     color: $white;
 
     img {
         order: -1;
         width: 70px;
         border-radius: 50%;
+        transition: $trans4;
     }
 
     section {
@@ -33,7 +35,16 @@ h1 {
         h2 {
             @include font16;
             font-weight: normal;
+            transition: $trans4;
         }
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    &:hover h2 {
+        color: $blue-light-focus;
     }
 }
 
@@ -74,12 +85,17 @@ h1 {
     height: 40px;
     width: 45px;
     transition: .4s;
+    cursor: pointer;
 }
 
-.heart-add:hover {
-    background: url(img/heart-hover.svg) center center no-repeat;
+.heart-default:hover {
+    background: url(../../dist/img/heart-hover.svg) center center no-repeat;
 }
 
-.heart-add:active {
-    background: url(img/heart-active.svg) center center no-repeat;
+.heart-default:active {
+    background: url(../../dist/img/heart-active.svg) center center no-repeat;
+}
+
+.heart-added {
+    background: url(../../dist/img/heart-added.svg) center center no-repeat;
 }
