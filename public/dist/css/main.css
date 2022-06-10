@@ -322,41 +322,46 @@ h1 {
   height: 15px;
 }
 
-fieldset {
+.form-form-test {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form-form-test label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.form-form-test label > label {
+  margin-bottom: -30px;
+}
+.form-form-test fieldset {
   border: none;
 }
-fieldset:first-of-type {
+.form-form-test fieldset:first-of-type {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-fieldset:nth-of-type(2) {
+.form-form-test fieldset:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-fieldset:nth-of-type(2) input {
+.form-form-test fieldset:nth-of-type(2) input {
   font-size: 18px;
   line-height: 30px;
   padding: 13px 20px;
   border: none;
   border-radius: 10px;
 }
-fieldset:last-of-type {
+.form-form-test fieldset:nth-of-type(3) label {
+  font-weight: normal;
+}
+.form-form-test fieldset:last-of-type {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.main-create form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.main-create label {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
 }
 
 .body-details {
