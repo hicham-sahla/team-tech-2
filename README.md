@@ -1,12 +1,11 @@
+## Over dit project
+Dit teamgedeelte is deel van Project Tech op de opleiding Communication and Multimedia Design op de Hva. Het is de bedoeling dat we onze gemaakte features van het individuele deel van het project samenvoegen en aanvullen tot een werkende applicatie.
+
 
 ## Concept
-Ben je altijd al opzoek geweest naar een mede dierenliefhebber. Heb je altijd al iemand willen ontmoeten maar weet je niet zo goed hoe? Koppel je huisdieren doormiddel van Petmatching.
+Voor dit project hebben wij de applicatie van Xiao Nan uitgewerkt. Het concept is dat er een kdrama applicatie is gemaakt om kdrama series toe te voegen aan een lijstje. Met de Team opdracht wordt dit uitgebreid. Zo kunnen gebruikers inloggen / registreren en kunnen er kdrama’s toegevoegd worden.
 
-- Vind mede dierenliefhebbers
-- Gebruik een interactieve map om andere gebruikers te zien
-- Creeër een profiel, wij zoeken iemand die perfect bij je past
-
-Na het aanmaken van een profiel zie je alle andere profielen. Hierbij zie je iemand zijn naam, huisdier en bio. Wil je je hond uitlaten met iemand maar weet je niet hoe warm het is? Treur niet gebaseerd op je geolocatie wordt live opgehaald hoe warm het is in jouw gemeente.
+Zie Xiao haar [Wiki](https://github.com/xiaonanpols21/block-tech-v2/wiki) voor uitgebreide uitleg over het concept en meer.
 
 ## Installation
 
@@ -30,23 +29,20 @@ De database structuur wordt bepaald door de models. Het handmatig opzetten van d
 ## Gebruik van eigen database
 Wil je het product zelf opzetten met je eigen database? Neem de env file over en laat "example" weg. Vul de juiste variabelen in.
 
-## OpenweatherAPI
-Wil je gebruik maken van je eigen openweatherAPI. De API key kan je eenvoudig zelf aanpassen in het volgende bestand public/dist/js/weatherapi.js
-
 ## Resources 
 
-Tijdens het project heb ik meerdere resources en services gebruikt die het mogelijk hebben gemaakt om dit project tot stand te brengen.
+Tijdens het project hebben we meerdere resources en services gebruikt die het mogelijk hebben gemaakt om dit project tot stand te brengen.
 
 - [MongoDB Atlas](https://www.mongodb.com/atlas/database)
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Express framework](https://expressjs.com/)
 - [EJS](https://ejs.co/)
-- [openweathermap API](https://openweathermap.org/)
 
 ## License
-© Hicham Sahla
 Licensed under the MIT License
 
 ## Contact
-Naam: Hicham Sahla
-Email: hicham.sahla@hva.nl
+hicham.sahla@hva.nl
+hidde.van.der.plaat@hva.nl
+menno.vlaming@hva.nl
+xiao.nan.pols@hva.nl
