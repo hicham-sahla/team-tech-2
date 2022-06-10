@@ -3,75 +3,32 @@
 <head>
   <%- include('../partials/head'); %>
 </head>
-<body>
-    <h1>Sign in</h1>
+<body class="body-home">
+    <header class="header-home">
+        <div>
+            <h2>Tomorrow</h2>
 
-    <main>
-        <form action="congrats.html">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="ARMY">
+            <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
+            <ul class="header-genres">
+                <li>drama</li>
+                <li>scifi-fantasy</li>
+                <li>action-adventure</li>
+            </ul>
+        </div>
 
-            <fieldset class="e-p-flex"> 
-                <div class="f-clmn">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="army@bighit.com" required>
-                </div>
-                
-                <div class="f-clmn">
-                    <label for="phone">Phone number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+82 123 456 78" required>
-                    <!-- Bron: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel -->
-                </div>
-            </fieldset>
-            
-            <label for="ch-member">Choose member</label>
-            <select name="ch-member" id="ch-member">
-                <option value="f-rm">RM</option>
-                <option value="f-jin">Jin</option>
-                <option value="f-suga">Suga</option>
-                <option value="f-jh">j-hope</option>
-                <option value="f-jimin">Jimin</option>
-                <option value="f-v">V</option>
-                <option value="f-jk">Jungkook</option>
-            </select>
+        <!-- Toon hier de eerste serie van de database -->
+        <img src="../dist/img/tomorrow.jpeg" alt="Tomorrow">
+        
+        <div class="overlay"></div>
+    </header>
+    <main class="main-home">
+        <h1>Have all your series in one place</h1>
+        <p>Make an account to start your journey to have all your series in one place</p>
 
-            <fieldset class="ch-package">
-                <legend>Choose package</legend>
-                <div class="inline">
-                    <input type="radio" id="small" value="small" name="pack-choices">
-                    <label for="small">Small: $840,-</label>
-                </div>
-                <div class="inline">
-                    <input type="radio" id="medium" value="medium" name="pack-choices">
-                    <label for="medium">Medium: $1260,-</label>
-                </div>
-
-                <div class="inline">
-                    <input type="radio" id="large" value="large" name="pack-choices">
-                    <label for="large">Large: $1580,-</label>
-                </div>
-            </fieldset>
-
-            <fieldset class="ch-date">
-                <legend>Choose date</legend>
-                <div class="inline">
-                    <input type="radio" id="feb" value="feb" name="pack-date">
-                    <label for="feb">3-2-2021</label>
-                </div>
-                <div class="inline">
-                    <input type="radio" id="ap" value="ap" name="pack-date">
-                    <label for="ap">23-4-2021</label>
-                </div>
-
-                <div class="inline">
-                    <input type="radio" id="jun" value="jun" name="pack-date">
-                    <label for="jun">15-6-2021</label>
-                </div>
-            </fieldset>
-            <button>Submit</button>
-        </form>
+        <button>Sign in</button>
+        <button>Sign up</button>
     </main>
-
+    <img class="logo" src="../dist/img/logo.svg" alt="Logo">
     <script src="/dist/js/scripts.js"></script>
 </body>
 </html>

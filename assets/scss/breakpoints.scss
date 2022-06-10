@@ -8,7 +8,6 @@
     .main-home {
         @include max500;
     }
-    // TODO: kijken of apart max500 of body
 
     .body-series {
         @include max500;
@@ -19,6 +18,12 @@
 @media (min-width: 768px) {  }
 
 // Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+    .logo {
+        display: none;
+    }
+}
+
 @media (min-width: 992px) {
     // Font
     // Home

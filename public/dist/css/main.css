@@ -113,6 +113,11 @@
   color: white;
 }
 
+.logo {
+  position: absolute;
+  height: 70px;
+}
+
 h1 {
   font-size: 26px;
   line-height: 31px;
@@ -233,6 +238,127 @@ h1 {
   background: url(../../dist/img/heart-added.svg) center center no-repeat;
 }
 
+h1 {
+  color: white;
+}
+
+.main-sign form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-sign h2 {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.main-sign label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.main-sign input {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+}
+.main-sign input:first-of-type {
+  margin-bottom: 30px;
+}
+.main-sign input:last-of-type {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: #4479a4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.main-sign input:last-of-type:hover {
+  background-color: #335b7b;
+  color: white;
+}
+.main-sign input:last-of-type:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.main-sign input:last-of-type:active {
+  background-color: #223c52;
+  color: white;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.page-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+.page-title h1 {
+  margin-left: 29px;
+}
+.page-title h1::before {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  background-image: url(../../dist/img/i-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 15px;
+}
+
+fieldset {
+  border: none;
+}
+fieldset:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+fieldset:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+fieldset:nth-of-type(2) input {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+}
+fieldset:last-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-create form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main-create label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
 @media (min-width: 576px) {
   .header-home {
     width: 500px;
@@ -247,6 +373,11 @@ h1 {
   .body-series {
     width: 500px;
     margin: auto;
+  }
+}
+@media (max-width: 992px) {
+  .logo {
+    display: none;
   }
 }
 @media (min-width: 992px) {
