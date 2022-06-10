@@ -1,15 +1,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     // Home
-    .header-home {
-        @include max500;
-    }
-
-    .main-home {
-        @include max500;
-    }
-
-    .body-series {
+    .header-home, .main-home, .body-series {
         @include max500;
     }
 }
@@ -27,18 +19,14 @@
 @media (min-width: 992px) {
     // Font
     // Home
-    .main-home h1 {
+    .main-home h1, .header-home h2 {
         @include font42;
     }
 
     .main-home p {
         @include font20;
     }
-
-    .header-home h2 {
-        @include font42;
-    }
-
+    
     .header-genres {
         @include font18;
     }
