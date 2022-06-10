@@ -13,6 +13,19 @@ const serie_create_test = (req, res) => {
   res.render("series/form-test");
 };
 
+const serie_create_post = (req, res) => {
+  const serie = new Serie(req.body);
+
+  serie
+    .save()
+    .then((result) => {
+      res.redirect("/series");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 
 
 module.exports = {
@@ -20,4 +33,5 @@ module.exports = {
   serie_details,
   serie_create_get,
   serie_create_test,
+  serie_create_post
 };
