@@ -1,7 +1,39 @@
 @import 'variables';
-@import 'general';
-@import 'form';
-@import 'users';
+@import 'home';
+@import 'series';
+@import 'sign';
+@import 'create';
+@import 'details';
+@import "breakpoints";
 
-// import bootstrap 5 files
-@import '../../node_modules/bootstrap/scss/bootstrap';
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    background-color: $body-bg;
+    font-family: $font-stack;
+    padding: 20px;
+    color: $white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
