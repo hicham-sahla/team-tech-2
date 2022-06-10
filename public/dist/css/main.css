@@ -359,18 +359,12 @@ fieldset:last-of-type {
   font-weight: bold;
 }
 
+.body-details {
+  padding: 0px;
+}
+
 @media (min-width: 576px) {
-  .header-home {
-    width: 500px;
-    margin: auto;
-  }
-
-  .main-home {
-    width: 500px;
-    margin: auto;
-  }
-
-  .body-series {
+  .header-home, .main-home, .body-series {
     width: 500px;
     margin: auto;
   }
@@ -381,7 +375,7 @@ fieldset:last-of-type {
   }
 }
 @media (min-width: 992px) {
-  .main-home h1 {
+  .main-home h1, .header-home h2 {
     font-size: 42px;
     line-height: 50px;
   }
@@ -389,11 +383,6 @@ fieldset:last-of-type {
   .main-home p {
     font-size: 20px;
     line-height: 33px;
-  }
-
-  .header-home h2 {
-    font-size: 42px;
-    line-height: 50px;
   }
 
   .header-genres {
