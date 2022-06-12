@@ -842,3 +842,17 @@ a {
     height: 25px;
   }
 }
+
+.card {
+  transform: translateY(100px);
+  transition: 150ms;
+}
+
+.card.card-opacity {
+  opacity: 0;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
