@@ -1,6 +1,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .header-home, .main-home, .body-series, .body-form-test, .body-details {
+    .header-home, .main-home, .body-series, 
+    .body-form-test, .body-details, .body-profile {
         @include max500;
     }
 }
@@ -38,6 +39,25 @@
     // Series
     .user-profile section h2 {
         @include font26;
+    }
+
+    // Details
+    .main-details {
+        h1 {
+            @include font42;
+        }
+
+        h2 {
+            @include font34;
+        }
+
+        .header-genres {
+            @include font20;
+        }
+
+        p {
+            @include font20;
+        }
     }
 
     // Form-test
@@ -193,7 +213,38 @@
         margin: auto;
     }
 
+    // Profile
+    .body-profile {
+        @include width100;
+        margin: 0px;
 
+        & > h3 {
+            @include font26;
+        }
+    }
+
+    .user-avatar {
+        img {
+            width: 120px;
+        }
+
+        h2 {
+            @include font26;
+        }
+    }
+
+    .main-profile {
+        gap: 30px;
+        
+        img {
+            width: 203px;
+            height: 344px;
+        }
+
+        h3 {
+            @include font18;
+        }
+    }
 
 }
 

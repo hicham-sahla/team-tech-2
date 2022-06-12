@@ -482,8 +482,82 @@ h1 {
   line-height: 28px;
 }
 
+.body-profile > h3 {
+  margin: 50px 0px 10px 0px;
+}
+
+.signout {
+  position: relative;
+  display: flex;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+}
+.signout::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: "";
+  background-image: url(../../dist/img/i-signout.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+}
+
+.user-avatar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.user-avatar img {
+  order: -1;
+  width: 100px;
+  border-radius: 50%;
+}
+.user-avatar h2 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.main-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: auto;
+  margin-right: -20px;
+  padding-right: 20px;
+}
+.main-profile img {
+  height: 210px;
+  width: 140px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.main-profile button {
+  background: none;
+  border: none;
+}
+.main-profile article {
+  position: relative;
+}
+.main-profile form {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.main-profile h3 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
 @media (min-width: 576px) {
-  .header-home, .main-home, .body-series, .body-form-test, .body-details {
+  .header-home, .main-home, .body-series,
+.body-form-test, .body-details, .body-profile {
     width: 500px;
     margin: auto;
   }
@@ -517,6 +591,23 @@ h1 {
   .user-profile section h2 {
     font-size: 26px;
     line-height: 31px;
+  }
+
+  .main-details h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .main-details h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .main-details .header-genres {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  .main-details p {
+    font-size: 20px;
+    line-height: 33px;
   }
 
   .body-home {
@@ -661,6 +752,36 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 2;
     margin: auto;
+  }
+
+  .body-profile {
+    width: 100%;
+    padding: 50px 150px;
+    margin: 0px;
+  }
+  .body-profile > h3 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  .user-avatar img {
+    width: 120px;
+  }
+  .user-avatar h2 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  .main-profile {
+    gap: 30px;
+  }
+  .main-profile img {
+    width: 203px;
+    height: 344px;
+  }
+  .main-profile h3 {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 * {
