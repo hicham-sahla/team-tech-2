@@ -3,9 +3,9 @@
 <head>
     <%- include('../partials/head'); %>
 </head>
-<body>
+<body class="body-form-test">
     <a class="page-title" href=""><h1>Add Serie</h1></a>
-    <main>
+    <main class="main-form-test">
         <form class="form-form-test" action="/series" method="POST">
             <fieldset>
                 <label for="img">
@@ -19,39 +19,41 @@
                 <input type="text" placeholder="Serie name" required id="title" name="title" />
             </fieldset>
             
-            <label for="genre">Genres</label>
-            <fieldset>
-                <input type="checkbox" id="genre-1" name="genre-1" value="drama" />
-                <label for="genre-1">Drama</label>
-        
-                <input type="checkbox" id="genre-2" name="genre-2" value="comedy" />
-                <label for="genre-2">Comedy</label>
-        
-                <input type="checkbox" id="genre-3" name="genre-3" value="family" />
-                <label for="genre-3">Family</label>
-        
-                <input type="checkbox" id="genre-4" name="genre-4" value="reality" />
-                <label for="genre-4">Reality</label>
-        
-                <input type="checkbox" id="genre-5" name="genre-5" value="bl" />
-                <label for="genre-5">BL</label>
-        
-                <input type="checkbox" id="genre-6" name="genre-6" value="action-adventure" />
-                <label for="genre-6">Action & Adventure</label>
-        
-                <input type="checkbox" id="genre-7" name="genre-7" value="mystery" />
-                <label for="genre-7">Mystery</label>
-        
-                <input type="checkbox" id="genre-8" name="genre-8" value="scifi-fantasy" />
-                <label for="genre-8">Scifi & Fantasy</label>
-        
-                <input type="checkbox" id="genre-9" name="genre-9" value="talk" />
-                <label for="genre-9">Talk</label>
-        
-                <input type="checkbox" id="genre-10" name="genre-10" value="war-politics" />
-                <label for="genre-10">War & Politics</label>
-            </fieldset>
-
+            <div>
+                <label for="genre">Genres</label>
+                <fieldset>
+                    <input type="checkbox" id="genre-1" name="genre-1" value="drama" />
+                    <label for="genre-1">Drama</label>
+            
+                    <input type="checkbox" id="genre-2" name="genre-2" value="comedy" />
+                    <label for="genre-2">Comedy</label>
+            
+                    <input type="checkbox" id="genre-3" name="genre-3" value="family" />
+                    <label for="genre-3">Family</label>
+            
+                    <input type="checkbox" id="genre-4" name="genre-4" value="reality" />
+                    <label for="genre-4">Reality</label>
+            
+                    <input type="checkbox" id="genre-5" name="genre-5" value="bl" />
+                    <label for="genre-5">BL</label>
+            
+                    <input type="checkbox" id="genre-6" name="genre-6" value="action-adventure" />
+                    <label for="genre-6">Action & Adventure</label>
+            
+                    <input type="checkbox" id="genre-7" name="genre-7" value="mystery" />
+                    <label for="genre-7">Mystery</label>
+            
+                    <input type="checkbox" id="genre-8" name="genre-8" value="scifi-fantasy" />
+                    <label for="genre-8">Scifi & Fantasy</label>
+            
+                    <input type="checkbox" id="genre-9" name="genre-9" value="talk" />
+                    <label for="genre-9">Talk</label>
+            
+                    <input type="checkbox" id="genre-10" name="genre-10" value="war-politics" />
+                    <label for="genre-10">War & Politics</label>
+                </fieldset>
+            </div>
+            
             <fieldset>
                 <label for="">About</label>
                 <textarea type="text" placeholder="About" required id="about"></textarea>

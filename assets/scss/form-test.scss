@@ -3,28 +3,6 @@
     color: rgba($black, 0.5);
 }
 
-.page-title {
-    position: relative;
-    display: block;
-    width: fit-content;
-
-    h1 {
-        margin-left: 20px + 9px;
-        &::before {
-            position: absolute;
-            left: 0px;
-            top: 50%;
-            transform: translateY(-50%);
-            content: "";
-            background-image: url(../../dist/img/i-arrow.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 9px;
-            height: 15px;
-        }
-    }
-}
-
 .form-form-test {
     @include flex(column, 30px);
 
@@ -37,27 +15,33 @@
         }
     }
 
+    & > fieldset:first-of-type {
+        label {
+            @include btn-2;
+            display: block;
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 10px;
+            font-weight: normal;
+        }
+    }
+
+    & > fieldset:last-of-type {
+        @include flex(column, 10px);
+    }
+
     fieldset {
         border: none;
-    
-        &:first-of-type, &:nth-of-type(2), &:last-of-type {
+
+        &:nth-of-type(2) {
             @include flex(column, 10px);
         }
+    }
 
-        &:first-of-type {
-            label {
-                @include btn-2;
-                padding: 10px 20px;
-                width: fit-content;
-                border-radius: 10px;
-                font-weight: normal;
-            }
-        }
-
-        &:nth-of-type(3) {
+    div {
+        fieldset {
             @include grid(20px 1fr, 5px 10px);
             align-items: center;
-            margin-top: -20px;
 
             label {
                 font-weight: normal;
