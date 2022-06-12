@@ -338,30 +338,93 @@ h1 {
 .form-form-test fieldset {
   border: none;
 }
-.form-form-test fieldset:first-of-type {
+.form-form-test fieldset:first-of-type, .form-form-test fieldset:nth-of-type(2), .form-form-test fieldset:last-of-type {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.form-form-test fieldset:nth-of-type(2) {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.form-form-test fieldset:first-of-type label {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 10px;
+  font-weight: normal;
 }
-.form-form-test fieldset:nth-of-type(2) input {
+.form-form-test fieldset:first-of-type label:hover {
+  background-color: white;
+  color: #01235a;
+}
+.form-form-test fieldset:first-of-type label:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.form-form-test fieldset:first-of-type label:active {
+  background-color: #223c52;
+  color: white;
+}
+.form-form-test fieldset:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 5px 10px;
+  align-items: center;
+  margin-top: -20px;
+}
+.form-form-test fieldset:nth-of-type(3) label {
+  font-weight: normal;
+}
+.form-form-test input[type=file] {
+  display: none;
+}
+.form-form-test input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+.form-form-test input[type=text], .form-form-test textarea {
   font-size: 18px;
   line-height: 30px;
   padding: 13px 20px;
   border: none;
   border-radius: 10px;
 }
-.form-form-test fieldset:nth-of-type(3) label {
-  font-weight: normal;
+.form-form-test textarea {
+  height: 200px;
 }
-.form-form-test fieldset:last-of-type {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.form-form-test input[type=submit] {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: #4479a4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.form-form-test input[type=submit]:hover {
+  background-color: #335b7b;
+  color: white;
+}
+.form-form-test input[type=submit]:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.form-form-test input[type=submit]:active {
+  background-color: #223c52;
+  color: white;
 }
 
 .body-details {
