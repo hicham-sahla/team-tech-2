@@ -242,34 +242,34 @@ h1 {
   color: white;
 }
 
-.main-sign form {
+.main-signin form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.main-sign h2 {
+.main-signin h2 {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 50px;
   font-weight: normal;
   text-decoration: underline;
 }
-.main-sign label {
+.main-signin label {
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
 }
-.main-sign input {
+.main-signin input {
   font-size: 18px;
   line-height: 30px;
   padding: 13px 20px;
   border: none;
   border-radius: 10px;
 }
-.main-sign input:first-of-type {
+.main-signin input:first-of-type {
   margin-bottom: 30px;
 }
-.main-sign input:last-of-type {
+.main-signin input:last-of-type {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -283,15 +283,68 @@ h1 {
   transition: 0.4s;
   cursor: pointer;
 }
-.main-sign input:last-of-type:hover {
+.main-signin input:last-of-type:hover {
   background-color: #335b7b;
   color: white;
 }
-.main-sign input:last-of-type:focus {
+.main-signin input:last-of-type:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.main-sign input:last-of-type:active {
+.main-signin input:last-of-type:active {
+  background-color: #223c52;
+  color: white;
+}
+
+.main-signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-signup h2 {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.main-signup label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.main-signup input {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 20px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+}
+.main-signup input:last-of-type {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: #4479a4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.main-signup input:last-of-type:hover {
+  background-color: #335b7b;
+  color: white;
+}
+.main-signup input:last-of-type:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.main-signup input:last-of-type:active {
   background-color: #223c52;
   color: white;
 }
@@ -557,7 +610,7 @@ h1 {
 
 @media (min-width: 576px) {
   .header-home, .main-home, .body-series,
-.body-form-test, .body-details, .body-profile {
+.body-form-test, .body-details, .body-profile, .body-signin, .body-signup {
     width: 500px;
     margin: auto;
   }
@@ -782,6 +835,15 @@ h1 {
   .main-profile h3 {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  .body-signin, .body-signup {
+    width: 100%;
+    padding: 50px 150px;
+  }
+
+  .main-signin form, .main-signup form {
+    width: 350px;
   }
 }
 * {

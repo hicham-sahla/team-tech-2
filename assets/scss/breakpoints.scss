@@ -1,7 +1,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .header-home, .main-home, .body-series, 
-    .body-form-test, .body-details, .body-profile {
+    .body-form-test, .body-details, .body-profile, .body-signin, .body-signup {
         @include max500;
     }
 }
@@ -246,10 +246,13 @@
         }
     }
 
+    // Signin
+    .body-signin, .body-signup {
+        @include width100;
+    }
+
+    .main-signin form, .main-signup form {
+        width: 350px;
+    }
+
 }
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {  }
