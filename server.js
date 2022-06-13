@@ -8,6 +8,9 @@ const connectDB = require("./config/dbConn");
 const userRoutes = require("./routes/userRoutes");
 const serieRoutes = require("./routes/serieRoutes");
 
+// Xiao Nan heeft dit toegevoegd
+const compression = require('compression')
+
 // Connect to MongoDB
 connectDB();
 
@@ -22,6 +25,9 @@ app.use(
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
+
+// Xiao Nan heeft dit toegevoegd
+app.use(compression());
 
 // user routes
 app.use(userRoutes);
