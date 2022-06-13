@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head'); %>
-  </head>
-  <body class="container">
-    <header><%- include('../partials/header'); %></header>
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="body-home">
+    <header class="header-home">
+        <div>
+            <h2>Tomorrow</h2>
 
-    <main class="d-flex justify-content-center">
-      <section class="row">
-        <div class="col-12 text-center">
-          <a href="/">Ga naar de homepage</a>
+            <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
+            <ul class="header-genres">
+                <li>drama</li>
+                <li>scifi-fantasy</li>
+                <li>action-adventure</li>
+            </ul>
         </div>
-      </section>
-    </main>
 
-    <footer><%- include('../partials/footer'); %></footer>
-  </body>
+        <!-- Toon hier de eerste serie van de database -->
+        <img src="../dist/img/tomorrow.jpeg" alt="Tomorrow">
+        
+        <div class="overlay-home"></div>
+    </header>
+    <main class="main-home">
+        <h1>404</h1>
+        <p>This page is missing for you. How about starting to make an account to collect series to watch later?</p>
+
+        <button>Home</button>
+    </main>
+    <img class="logo" src="../dist/img/logo.svg" alt="Logo">
+    <script src="../dist/js/visibility.js"></script>
+</body>
 </html>
