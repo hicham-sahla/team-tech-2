@@ -3,78 +3,32 @@
 <head>
   <%- include('../partials/head'); %>
 </head>
-<body class="body-series">
-    <h1>Choose Series</h1>
+<body class="body-home">
+    <header class="header-home">
+        <div>
+            <h2>Tomorrow</h2>
 
-    <!-- Als de gebruiker een account heeft, wordt de avatar en username getoond -->
-    <a class="user-profile" href="">
-        <section>
-            <h2>Xiao xiao</h2>
-            <img src="../dist/img/user-1.jpg" alt="Xiao xiao">
-        </section>
-    </a>
+            <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
+            <ul class="header-genres">
+                <li>drama</li>
+                <li>scifi-fantasy</li>
+                <li>action-adventure</li>
+            </ul>
+        </div>
 
-    <button>Add Series</button>
-
-    <main class="main-series">
-        <!-- 1 article moet in een foreach komen -->
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie paars wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
+        <!-- Toon hier de eerste serie van de database -->
+        <img src="../dist/img/tomorrow.jpeg" alt="Tomorrow">
         
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
-        <article>
-            <img src="../dist/img/404-cover.jpg" alt="404">
-            <form action="" method="post">
-                <button>
-                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
-                    <span class="heart-default"></span>
-                </button>
-                <input type="hidden" name="serieId" value="" />
-            </form>
-            <h3>Tomorrow</h3>
-        </article>
+        <div class="overlay-home"></div>
+    </header>
+    <main class="main-home">
+        <h1>Have all your series in one place</h1>
+        <p>Make an account to start your journey to have all your series in one place</p>
+
+        <button>Sign in</button>
+        <button>Sign up</button>
     </main>
+    <img class="logo" src="../dist/img/logo.svg" alt="Logo">
     <script src="../dist/js/visibility.js"></script>
 </body>
 </html>
