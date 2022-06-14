@@ -43,6 +43,9 @@ Licensed under the MIT License
 
 ## Contact
 hicham.sahla@hva.nl
+
 hidde.van.der.plaat@hva.nl
+
 menno.vlaming@hva.nl
+
 xiao.nan.pols@hva.nl
