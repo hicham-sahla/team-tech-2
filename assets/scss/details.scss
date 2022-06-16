@@ -2,3 +2,72 @@
     padding: 0px;
 }
 
+.header-details {
+    position: relative;
+    height: 400px;
+
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    a {
+        display: block;
+        &::before {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            content: "";
+            background-image: url(../../dist/img/i-arrow.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 17px;
+            height: 30px;
+            z-index: 2;
+        }
+    }
+}
+
+.overlay-details {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: $gradient-details-cover;
+    z-index: 1;
+}
+
+.main-details {
+    position: relative;
+    padding: 40px 20px 50px 20px;
+    margin-top: -40px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: $body-bg;
+
+    h1 {
+        @include font34;
+        margin: 0px;
+    }
+
+    .header-genres {
+        @include font18;
+        gap: 0px 10px;
+        flex-wrap: wrap;
+        margin: 10px 0px 50px 0px;
+    }
+
+    h2 {
+        @include font26;
+        margin-bottom: 10px;
+    }
+
+    p {
+        @include font16;
+    }
+}
