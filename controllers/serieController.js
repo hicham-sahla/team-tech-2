@@ -19,6 +19,15 @@ const serie_create_test = (req, res) => {
 const serie_home = (req, res) => {
   res.render("series/home");
 };
+const serie_profile = (req, res) => {
+  res.render("series/profile");
+};
+const serie_signin = (req, res) => {
+  res.render("series/signin");
+};
+const serie_signup = (req, res) => {
+  res.render("series/signup");
+};
 
 const serie_create_post = (req, res) => {
   const serie = new Serie(req.body);
@@ -41,5 +50,8 @@ module.exports = {
   serie_create_post,
 
   // Xiao Nan heeft dit toegevoegd
-  serie_home
+  serie_home,
+  serie_profile,
+  serie_signin,
+  serie_signup
 };
