@@ -20,8 +20,10 @@ const serie_create_post = (req, res) => {
   serie
     .save()
     .then((result) => {
-      console.log('success')
-      // res.redirect("/series");
+      series: result,
+      console.log('success');
+
+      res.send("Gelukt");
     })
     .catch((err) => {
       console.log(err);
