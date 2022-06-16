@@ -24,8 +24,8 @@ app.use(
 app.set("view engine", "ejs");
 
 // user routes
-app.use(userRoutes);
 app.use(serieRoutes);
+app.use(userRoutes);
 
 // 404 page
 app.use((req, res) => {

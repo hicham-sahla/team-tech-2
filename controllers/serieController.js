@@ -1,3 +1,4 @@
+const Serie = require("../models/Serie");
 
 const serie_index = (req, res) => {
       res.render("series/index");
@@ -14,17 +15,20 @@ const serie_create_test = (req, res) => {
 };
 
 const serie_create_post = (req, res) => {
-  const serie = new Serie(req.body);
-
+   const serie = new Serie(req.body);
+ 
   serie
     .save()
     .then((result) => {
-      res.redirect("/series");
+      console.log('success')
+      // res.redirect("/series");
     })
     .catch((err) => {
       console.log(err);
     });
 };
+
+
 
 
 module.exports = {
