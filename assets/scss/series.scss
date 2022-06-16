@@ -3,16 +3,14 @@ h1 {
     margin-bottom: 30px;
 }
 
-.body-series {
-    & > button {
-        @include btn-1;
-        display: flex;
-        padding: 10px 20px;
-        margin: 50px 0px 30px auto;
-        width: fit-content;
-        border-radius: 10px;
-        font-weight: normal;
-    }
+.add-serie {
+    @include btn-1;
+    display: block;
+    padding: 10px 20px;
+    margin: 50px 0px 30px auto;
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: normal;
 }
 
 .user-profile {

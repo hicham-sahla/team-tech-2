@@ -124,7 +124,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-.body-series > button {
+.add-serie {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -137,22 +137,22 @@ h1 {
   font-weight: bold;
   transition: 0.4s;
   cursor: pointer;
-  display: flex;
+  display: block;
   padding: 10px 20px;
   margin: 50px 0px 30px auto;
   width: fit-content;
   border-radius: 10px;
   font-weight: normal;
 }
-.body-series > button:hover {
+.add-serie:hover {
   background-color: #335b7b;
   color: white;
 }
-.body-series > button:focus {
+.add-serie:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.body-series > button:active {
+.add-serie:active {
   background-color: #223c52;
   color: white;
 }
@@ -704,7 +704,8 @@ h1 {
     width: 100%;
     padding: 50px 150px;
   }
-  .body-series > button {
+
+  .add-serie {
     padding: 25px 30px;
     border-radius: 20px;
     font-weight: bold;

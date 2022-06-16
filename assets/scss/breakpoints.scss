@@ -108,12 +108,12 @@
     // Series
     .body-series {
         @include width100;
+    }
 
-        & > button {
-            padding: 25px 30px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
+    .add-serie {
+        padding: 25px 30px;
+        border-radius: 20px;
+        font-weight: bold;
     }
 
     .main-series {
