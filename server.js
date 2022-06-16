@@ -1,12 +1,15 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 3000;
 const path = require("path");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
+
+// Defining routes
 const userRoutes = require("./routes/userRoutes");
 const serieRoutes = require("./routes/serieRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 // Connect to MongoDB
 connectDB();
@@ -23,9 +26,10 @@ app.use(
 // set the view engine to ejs
 app.set("view engine", "ejs");
 
-// user routes
+// Using routes
 app.use(userRoutes);
 app.use(serieRoutes);
+app.use(authRoutes);
 
 // 404 page
 app.use((req, res) => {
