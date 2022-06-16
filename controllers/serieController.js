@@ -27,7 +27,6 @@ const serie_create_post = (req, res) => {
 };
 
 
-
 module.exports = {
   serie_index,
   serie_details,

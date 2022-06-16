@@ -1,39 +1,32 @@
+const { type } = require("express/lib/response");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-  firstName: {
+const serieSchema = new Schema({
+  title: {
     type: String,
     required: true,
   },
-  lastName: {
+  about: {
     type: String,
     required: true,
   },
-  birthDate: {
-    type: Date,
+  genres: {
+    drama: { type: Boolean },
+    comedy: { type: Boolean },
+    family: { type: Boolean },
+    reality: { type: Boolean },
+    bl: { type: Boolean },
+    actionAdventure: { type: Boolean },
+    mystery: { type: Boolean },
+    scifi: { type: Boolean },
+    talk: { type: Boolean },
+    warPolitics: { type: Boolean },
     required: true,
+    type: String
+    // niet zeker of dit werkt
   },
-  personalColor: {
-    type: String,
-    required:true,
-  },
-  province: {
-    type: String,
-    required:true,
-  },
-  city: {
-    type: String,
-    required:true,
-  },
-  bio: {
-    type: String,
-    required:true,
-  },
-  petCategory: {
-    type: String,
-    required:true,
-  },
+
 }, {timestamps: true});
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Serie", serieSchema);
