@@ -1,10 +1,12 @@
 
+const Serie = require("../models/Series");
+
 const serie_index = (req, res) => {
-      res.render("series/index");
+  res.render("series/index");
 };
 
 const serie_details = (req, res) => {
-      res.render("series/details");
+  res.render("series/details");
 };
 
 const serie_create_get = (req, res) => {
@@ -17,8 +19,18 @@ const serie_create_test = (req, res) => {
 
 // Xiao nan heeft dit toegevoegd
 const serie_home = (req, res) => {
-  res.render("series/home");
+
+  Serie
+    .findOne({ about: '7' })
+    .then((result) => {
+      console.log(result);
+      res.render("series/home");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
+
 const serie_profile = (req, res) => {
   res.render("series/profile");
 };
@@ -27,10 +39,6 @@ const serie_signin = (req, res) => {
 };
 const serie_signup = (req, res) => {
   res.render("series/signup");
-};
-
-const serie_index_post = (req, res) => {
-
 };
 
 const serie_create_post = (req, res) => {
@@ -57,6 +65,5 @@ module.exports = {
   serie_home,
   serie_profile,
   serie_signin,
-  serie_signup,
-  serie_index_post
+  serie_signup
 };
