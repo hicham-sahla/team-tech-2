@@ -29,6 +29,10 @@ const serie_signup = (req, res) => {
   res.render("series/signup");
 };
 
+const serie_index_post = (req, res) => {
+
+};
+
 const serie_create_post = (req, res) => {
   const serie = new Serie(req.body);
 
@@ -53,5 +57,6 @@ module.exports = {
   serie_home,
   serie_profile,
   serie_signin,
-  serie_signup
+  serie_signup,
+  serie_index_post
 };
