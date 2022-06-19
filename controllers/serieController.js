@@ -21,10 +21,10 @@ const serie_create_test = (req, res) => {
 const serie_home = (req, res) => {
 
   Serie.find()
-    .sort({ createdAt: -1 })
+    .sort({ title: -1 })
     .then((result) => {
       console.log(result);
-      res.render("series/home");
+      res.render("series/home", {series: result});
     })
     .catch((err) => {
       console.log(err);

@@ -6,7 +6,9 @@
 <body class="body-home">
     <header class="header-home">
         <div>
-            <h2><%= Serie.title %></h2>
+            <% series.forEach(serie => { %>
+                <h2><%= serie.title %></h2>
+           <% }) %>
 
             <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
             <ul class="header-genres">
