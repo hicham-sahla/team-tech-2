@@ -4,7 +4,7 @@
   "description": "Eerste feature voor mijn Nodje JS project",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "scss-watch": "sass --no-source-map --watch assets/scss/main.scss public/dist/css/main.css",
     "dev": "npm-run-all --parallel scss-watch start"
   },

@@ -20,6 +20,7 @@ const serie_create_test = (req, res) => {
 // Xiao nan heeft dit toegevoegd
 const serie_home = (req, res) => {
 
+  /*
   Serie.find()
     .sort({ title: -1 })
     .then((result) => {
@@ -29,6 +30,28 @@ const serie_home = (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+  */
+
+    Serie.find()
+    .lean()
+    .sort({title: -1})
+    .then(result => { 
+      const firstDbItem = result[0] 
+      res.render("series/home", {series: firstDbItem});
+    });
+
+   /*
+    Serie.find()
+    .lean()
+      .sort({ title: -1 })
+      .then((result) => {
+        console.log(result);
+        res.render("series/home", {series: result});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      */
 };
 
 const serie_profile = (req, res) => {
