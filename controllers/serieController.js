@@ -20,8 +20,8 @@ const serie_create_test = (req, res) => {
 // Xiao nan heeft dit toegevoegd
 const serie_home = (req, res) => {
 
-  Serie
-    .findOne({ about: '7' })
+  Serie.find()
+    .sort({ createdAt: -1 })
     .then((result) => {
       console.log(result);
       res.render("series/home");
