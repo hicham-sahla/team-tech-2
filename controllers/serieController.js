@@ -15,8 +15,8 @@ const serie_index = (req, res) => {
 };
 
 const serie_details = (req, res) => {
-  /*
-  Serie.findOne() // Hier moet nog een query gemaakt worden met id
+  const serieId = {_id: Number(req.params.serieId)};
+  Serie.findOne({serieId}) // Hier moet nog een query gemaakt worden met id
   .lean()
   .then((result) => {
     res.render("series/details", {
@@ -26,7 +26,6 @@ const serie_details = (req, res) => {
   .catch((err) => {
     console.log(err);
   });
-  */
  // Hierboven is serie met findone die we moeten gebruiken
 
   Serie.find() 
