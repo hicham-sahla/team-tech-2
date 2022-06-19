@@ -2,11 +2,42 @@
 const Serie = require("../models/Series");
 
 const serie_index = (req, res) => {
-  res.render("series/index");
+  Serie.find()
+  .lean()
+  .then((result) => {
+    res.render("series/index", {
+      series: result
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 };
 
 const serie_details = (req, res) => {
-  res.render("series/details");
+  /*
+  Serie.findOne() // Hier moet nog een query gemaakt worden met id
+  .lean()
+  .then((result) => {
+    res.render("series/details", {
+      series: result
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+  */
+ // Hierboven is serie met findone die we moeten gebruiken
+
+  Serie.find() 
+  .lean()
+  .then((result) => {
+    const obItem = result[10] 
+    res.render("series/details", { series: obItem });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 };
 
 const serie_create_get = (req, res) => {
@@ -17,41 +48,14 @@ const serie_create_test = (req, res) => {
   res.render("series/form-test");
 };
 
-// Xiao nan heeft dit toegevoegd
 const serie_home = (req, res) => {
-
-  /*
   Serie.find()
-    .sort({ title: -1 })
-    .then((result) => {
-      console.log(result);
-      res.render("series/home", {series: result});
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  */
-
-    Serie.find()
-    .lean()
-    .sort({title: -1})
-    .then(result => { 
-      const firstDbItem = result[0] 
-      res.render("series/home", {series: firstDbItem});
-    });
-
-   /*
-    Serie.find()
-    .lean()
-      .sort({ title: -1 })
-      .then((result) => {
-        console.log(result);
-        res.render("series/home", {series: result});
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-      */
+  .lean()
+  .sort({title: -1}) // Hij gaat filter op abc
+  .then(result => { 
+    const firstDbItem = result[0] 
+    res.render("series/home", {series: firstDbItem});
+  });
 };
 
 const serie_profile = (req, res) => {
@@ -84,7 +88,6 @@ module.exports = {
   serie_create_test,
   serie_create_post,
 
-  // Xiao Nan heeft dit toegevoegd
   serie_home,
   serie_profile,
   serie_signin,
