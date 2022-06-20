@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3000;
 const path = require("path");
 const mongoose = require("mongoose");
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 const connectDB = require("./config/dbConn");
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(compression());
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
