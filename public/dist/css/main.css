@@ -609,8 +609,14 @@ h1 {
 }
 
 @media (min-width: 576px) {
-  .header-home, .main-home, .body-series,
-.body-form-test, .body-details, .body-profile, .body-signin, .body-signup {
+  .header-home,
+.main-home,
+.body-series,
+.body-form-test,
+.body-details,
+.body-profile,
+.body-signin,
+.body-signup {
     width: 500px;
     margin: auto;
   }
@@ -626,7 +632,8 @@ h1 {
     line-height: 50px;
   }
 
-  .main-home h1, .header-home h2 {
+  .main-home h1,
+.header-home h2 {
     font-size: 42px;
     line-height: 50px;
   }
@@ -837,12 +844,14 @@ h1 {
     line-height: 30px;
   }
 
-  .body-signin, .body-signup {
+  .body-signin,
+.body-signup {
     width: 100%;
     padding: 50px 150px;
   }
 
-  .main-signin form, .main-signup form {
+  .main-signin form,
+.main-signup form {
     width: 350px;
   }
 }
