@@ -40,3 +40,15 @@ mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
+
+// Xiao Nan like functie met mongodb
+app.post("/profile/:userId/:slug", async (req, res) => {
+  const query = {_id: ObjectId(req.params.userId)};
+  const user = await db.collection("users").findOne(query);
+  const filteredList = user.mylist.filter(kdrama => kdrama !== req.body.kdramaId)
+  const updateQuery = { $set: { mylist: filteredList } }
+  await db.collection('users').updateOne(query, updateQuery)
+
+  const url = `/profile/${req.params.userId}/${req.params.slug}`;
+  res.redirect(url);
+});

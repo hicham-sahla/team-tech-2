@@ -1,10 +1,31 @@
 
+const Serie = require("../models/Series");
+
 const serie_index = (req, res) => {
-      res.render("series/index");
+  Serie.find()
+  .lean()
+  .then((result) => {
+    res.render("series/index", {
+      series: result
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 };
 
 const serie_details = (req, res) => {
-      res.render("series/details");
+ const serieId = req.params.serieId;
+  Serie.findById(serieId)
+  .lean()
+  .then((result) => {
+    res.render("series/details", {
+      series: result
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 };
 
 const serie_create_get = (req, res) => {
@@ -15,10 +36,16 @@ const serie_create_test = (req, res) => {
   res.render("series/form-test");
 };
 
-// Xiao nan heeft dit toegevoegd
 const serie_home = (req, res) => {
-  res.render("series/home");
+  Serie.find()
+  .lean()
+  .sort({title: -1}) // Hij gaat filter op abc
+  .then(result => { 
+    const firstDbItem = result[0] 
+    res.render("series/home", {series: firstDbItem});
+  });
 };
+
 const serie_profile = (req, res) => {
   res.render("series/profile");
 };
@@ -42,6 +69,28 @@ const serie_create_post = (req, res) => {
     });
 };
 
+const serie_like_post = (req, res) => {
+  const userId = req.params.userId;
+  // Hier moet iets staan van: User.fintOne(userId)
+  let doc = await user.findOneAndUpdate(filter, update, {
+
+  });
+
+  res.redirect("series/index");
+};
+
+// Xiao Nan like functie met mongodb
+app.post("/profile/:userId/:slug", async (req, res) => {
+  const query = {_id: ObjectId(req.params.userId)};
+  const user = await db.collection("users").findOne(query);
+  const filteredList = user.mylist.filter(kdrama => kdrama !== req.body.kdramaId)
+  const updateQuery = { $set: { mylist: filteredList } }
+  await db.collection('users').updateOne(query, updateQuery)
+
+  const url = `/profile/${req.params.userId}/${req.params.slug}`;
+  res.redirect(url);
+});
+
 module.exports = {
   serie_index,
   serie_details,
@@ -49,9 +98,9 @@ module.exports = {
   serie_create_test,
   serie_create_post,
 
-  // Xiao Nan heeft dit toegevoegd
   serie_home,
   serie_profile,
   serie_signin,
-  serie_signup
+  serie_signup,
+  serie_like_post
 };

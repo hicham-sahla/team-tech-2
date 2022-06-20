@@ -193,6 +193,9 @@ h1 {
   grid-template-columns: 1fr 1fr;
   gap: 40px 20px;
 }
+.main-series a {
+  color: white;
+}
 .main-series img {
   width: 100%;
   margin-bottom: 5px;
