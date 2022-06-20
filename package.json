@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "scss-watch": "sass --no-source-map --watch assets/scss/main.scss public/dist/css/main.css",
-    "dev": "npm-run-all --parallel scss-watch start"
+    "gulp": "gulp",
+    "dev": "npm-run-all --parallel  start gulp"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,15 @@
     "dotenv": "^16.0.1",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
+    "gulp-cli": "^2.3.0",
+    "gulp-uglifycss": "^1.1.0",
     "mongoose": "^6.3.3",
     "sass": "^1.52.1"
   },
   "devDependencies": {
     "eslint": "^8.16.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "nodemon": "^2.0.16",
     "npm-run-all": "^4.1.5"
   }

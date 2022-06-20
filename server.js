@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 3000;
 const path = require("path");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
@@ -14,7 +14,10 @@ connectDB();
 // middleware & static files
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
-app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+app.use(
+  "/css",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
+);
 app.use(
   "/js",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
