@@ -1,7 +1,5 @@
 const Serie = require("../models/Serie");
 
-const Serie = require("../models/Series");
-
 const serie_index = (req, res) => {
   Serie.find()
   .lean()
@@ -63,9 +61,7 @@ const serie_create_post = (req, res) => {
   serie
     .save()
     .then((result) => {
-      series: result,
-      console.log('success');
-
+      result,
       res.send("Gelukt");
     })
     .catch((err) => {
