@@ -34,9 +34,10 @@ Wil je het product zelf opzetten met je eigen database? Neem de env file over en
 Tijdens het project hebben we meerdere resources en services gebruikt die het mogelijk hebben gemaakt om dit project tot stand te brengen.
 
 - [MongoDB Atlas](https://www.mongodb.com/atlas/database)
-- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Sass](https://sass-lang.com/)
 - [Express framework](https://expressjs.com/)
 - [EJS](https://ejs.co/)
+- [Gulp](https://gulpjs.com/)
 
 ## License
 Licensed under the MIT License
