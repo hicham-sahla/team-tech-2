@@ -32,7 +32,7 @@
             <article class="card">
                 <a href="/series/<%= serie._id %>">
                     <img src="../dist/img/404-cover.jpg" alt="404">
-                    <form action="/" method="post">
+                    <form action="/series/<%= user._id %>" method="post">
                       <button>
                           <!-- Een if else moet hier komen zodat het hartje van de serie paars wordt ipv wit -->
                           <span class="heart-default"></span>
