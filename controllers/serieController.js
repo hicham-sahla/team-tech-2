@@ -1,11 +1,11 @@
 const Serie = require("../models/Serie");
 
 const serie_index = (req, res) => {
-      res.render("series/index");
+  res.render("series/index");
 };
 
 const serie_details = (req, res) => {
-      res.render("series/details");
+  res.render("series/details");
 };
 const serie_create_get = (req, res) => {
   res.render("series/create");
@@ -20,17 +20,13 @@ const serie_create_post = (req, res) => {
   serie
     .save()
     .then((result) => {
-      series: result,
-      console.log('success');
-
+      result,
       res.send("Gelukt");
     })
     .catch((err) => {
       console.log(err);
     });
 };
-
-
 
 
 module.exports = {

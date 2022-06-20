@@ -5,26 +5,19 @@ const serieSchema = new Schema({
   title: {
     type: String,
     required: true,
-  }
-  // about: {
-  //   type: String,
-  //   required: true,
-  // },
-  // genres: {
-  //   drama: { type: Boolean },
-  //   comedy: { type: Boolean },
-  //   family: { type: Boolean },
-  //   reality: { type: Boolean },
-  //   bl: { type: Boolean },
-  //   actionAdventure: { type: Boolean },
-  //   mystery: { type: Boolean },
-  //   scifi: { type: Boolean },
-  //   talk: { type: Boolean },
-  //   warPolitics: { type: Boolean },
-  //   required: true,
-  //   type: String
-  //   // niet zeker of dit werkt
-  // },
+  },
+  about: {
+    type: String,
+    required: true,
+  },
+  img:  {
+      data: Buffer,
+      contentType: String
+    },
+  
+  genres: [{
+    type: String
+  }],
 
 }, {timestamps: true});
 
