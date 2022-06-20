@@ -13,6 +13,6 @@ router.get('/home', serieController.serie_home);
 router.get('/series/profile', serieController.serie_profile);
 router.get('/series/signin', serieController.serie_signin);
 router.get('/series/signup', serieController.serie_signup);
-//router.post('/series', serieController.serie_like_post);
+router.post('/series', serieController.serie_like_post);
 
 module.exports = router; 
