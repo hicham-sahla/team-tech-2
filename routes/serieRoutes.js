@@ -13,5 +13,6 @@ router.get('/home', serieController.serie_home);
 router.get('/series/profile', serieController.serie_profile);
 router.get('/series/signin', serieController.serie_signin);
 router.get('/series/signup', serieController.serie_signup);
+router.get('/contact', serieController.serie_contact);
 
 module.exports = router; 

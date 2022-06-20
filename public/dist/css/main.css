@@ -349,6 +349,74 @@ h1 {
   color: white;
 }
 
+.main-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-contact h2 {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.main-contact label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.main-contact input {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 20px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+}
+.main-contact input:last-of-type {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: #4479a4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.main-contact input:last-of-type:hover {
+  background-color: #335b7b;
+  color: white;
+}
+.main-contact input:last-of-type:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.main-contact input:last-of-type:active {
+  background-color: #223c52;
+  color: white;
+}
+.main-contact fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+}
+.main-contact textarea {
+  font-size: 18px;
+  line-height: 30px;
+  height: 200px;
+  padding: 13px 20px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
 ::placeholder {
   font-family: "Poppins", sans-serif;
   color: rgba(0, 0, 0, 0.5);
@@ -610,7 +678,8 @@ h1 {
 
 @media (min-width: 576px) {
   .header-home, .main-home, .body-series,
-.body-form-test, .body-details, .body-profile, .body-signin, .body-signup {
+.body-form-test, .body-details, .body-profile, .body-signin, .body-signup,
+.body-contact {
     width: 500px;
     margin: auto;
   }
@@ -838,12 +907,12 @@ h1 {
     line-height: 30px;
   }
 
-  .body-signin, .body-signup {
+  .body-signin, .body-signup, .body-contact {
     width: 100%;
     padding: 50px 150px;
   }
 
-  .main-signin form, .main-signup form {
+  .main-signin form, .main-signup form, .main-contact form {
     width: 350px;
   }
 }

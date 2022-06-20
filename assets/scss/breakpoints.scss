@@ -1,7 +1,8 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .header-home, .main-home, .body-series, 
-    .body-form-test, .body-details, .body-profile, .body-signin, .body-signup {
+    .body-form-test, .body-details, .body-profile, .body-signin, .body-signup,
+    .body-contact {
         @include max500;
     }
 }
@@ -247,11 +248,11 @@
     }
 
     // Signin
-    .body-signin, .body-signup {
+    .body-signin, .body-signup, .body-contact {
         @include width100;
     }
 
-    .main-signin form, .main-signup form {
+    .main-signin form, .main-signup form, .main-contact form {
         width: 350px;
     }
 }

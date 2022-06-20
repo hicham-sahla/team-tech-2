@@ -67,3 +67,49 @@ h1 {
         }
     }
 }
+
+// Contact
+.main-contact {
+    form {
+        @include flex(column, 10px);
+    }
+
+    h2 {
+        @include font18;
+        margin-bottom: 50px;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    label {
+        @include font18;
+        font-weight: bold;
+    }
+
+    input {
+        @include font18;
+        padding: 13px 20px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 10px;
+
+        &:last-of-type {
+            @include btn-1;
+            margin-top: 20px;
+        }
+    }
+
+    fieldset {
+        @include flex(column, 10px);
+        border: none;
+    }
+
+    textarea {
+        @include font18;
+        height: 200px;
+        padding: 13px 20px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 10px;   
+    }
+}
