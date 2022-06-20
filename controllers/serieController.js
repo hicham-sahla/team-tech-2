@@ -14,25 +14,19 @@ const serie_index = (req, res) => {
 };
 
 const serie_details = (req, res) => {
- const serieId = req.params.serieId;
-  Serie.findById(serieId)
+const id = req.params.id;
+Serie.findById(id)
   .lean()
   .then((result) => {
-    res.render("series/details", {
-      series: result
-    });
+    res.render("series/details", { series: result});
   })
   .catch((err) => {
-    console.log(err);
+    res.status(404).render("pages/404", { title: "Serie niet gevonden" });
   });
 };
 
 const serie_create_get = (req, res) => {
   res.render("series/create");
-};
-
-const serie_create_test = (req, res) => {
-  res.render("series/form-test");
 };
 
 const serie_home = (req, res) => {
@@ -43,19 +37,6 @@ const serie_home = (req, res) => {
     const firstDbItem = result[0] 
     res.render("series/home", {series: firstDbItem});
   });
-};
-
-const serie_profile = (req, res) => {
-  res.render("series/profile");
-};
-const serie_signin = (req, res) => {
-  res.render("series/signin");
-};
-const serie_signup = (req, res) => {
-  res.render("series/signup");
-};
-const serie_contact = (req, res) => {
-  res.render("series/contact");
 };
 
 const serie_create_post = (req, res) => {
@@ -72,40 +53,14 @@ const serie_create_post = (req, res) => {
     });
 };
 
-const serie_like_post = (req, res) => {
-  const userId = req.params.userId;
-  // Hier moet iets staan van: User.fintOne(userId)
-  let doc = await user.findOneAndUpdate(filter, update, {
 
-  });
 
-  res.redirect("series/index");
-};
 
-// Xiao Nan like functie met mongodb
-app.post("/profile/:userId/:slug", async (req, res) => {
-  const query = {_id: ObjectId(req.params.userId)};
-  const user = await db.collection("users").findOne(query);
-  const filteredList = user.mylist.filter(kdrama => kdrama !== req.body.kdramaId)
-  const updateQuery = { $set: { mylist: filteredList } }
-  await db.collection('users').updateOne(query, updateQuery)
-
-  const url = `/profile/${req.params.userId}/${req.params.slug}`;
-  res.redirect(url);
-});
 
 
 module.exports = {
   serie_index,
   serie_details,
   serie_create_get,
-  serie_create_test,
   serie_create_post,
-
-  serie_home,
-  serie_profile,
-  serie_signin,
-  serie_signup,
-  serie_contact,
-  serie_like_post
 };
