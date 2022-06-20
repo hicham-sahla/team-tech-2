@@ -49,6 +49,10 @@ h1 {
 .main-series {
     @include grid(1fr 1fr, 40px 20px);
 
+    a {
+        color: $white;
+    }
+
     img {
         width: 100%;
         margin-bottom: 5px;
