@@ -26,7 +26,6 @@ function getWeather() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         let temp = data.main.temp;
         temperature.innerHTML = temp + "° C";
         location.innerHTML =
