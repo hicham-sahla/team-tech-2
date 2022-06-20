@@ -54,6 +54,9 @@ const serie_signin = (req, res) => {
 const serie_signup = (req, res) => {
   res.render("series/signup");
 };
+const serie_contact = (req, res) => {
+  res.render("series/contact");
+};
 
 const serie_create_post = (req, res) => {
    const serie = new Serie(req.body);
@@ -103,5 +106,6 @@ module.exports = {
   serie_profile,
   serie_signin,
   serie_signup,
+  serie_contact,
   serie_like_post
 };
