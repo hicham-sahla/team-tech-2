@@ -82,10 +82,12 @@ module.exports.login_post = async (req, res) => {
   }
 
 }
+
 module.exports.serie_like_post = (req, res) => {
   jwt.verify(token, 'secret', (err, user) => {
     if (err) console.log(err) // eg. invalid token, or expired token
-    const newLike = req.body.like
+    // ipv req.body.like dus req.body.serieId
+    const newLike = req.body.serieId
     const filter = { _id: user.id }
     const update = { likes: user.likes }
     req.user = user
