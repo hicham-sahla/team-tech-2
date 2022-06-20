@@ -15,24 +15,13 @@ const serie_index = (req, res) => {
 };
 
 const serie_details = (req, res) => {
-  const serieId = {_id: Number(req.params.serieId)};
-  Serie.findOne({serieId}) // Hier moet nog een query gemaakt worden met id
+ const serieId = req.params.serieId;
+  Serie.findById(serieId)
   .lean()
   .then((result) => {
     res.render("series/details", {
       series: result
     });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
- // Hierboven is serie met findone die we moeten gebruiken
-
-  Serie.find() 
-  .lean()
-  .then((result) => {
-    const obItem = result[10] 
-    res.render("series/details", { series: obItem });
   })
   .catch((err) => {
     console.log(err);
