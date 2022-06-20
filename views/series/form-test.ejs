@@ -1,46 +1,56 @@
   <h2>Add Serie</h2>
   <form action="/series" method="POST">
-      <label for="">Add cover</label>
-      <input />
 
       <label for="">Title</label>
-      <input type="text" placeholder="Serie name" required id="title" name="title" />
+      <input 
+      type="text" 
+      placeholder="Serie name" 
+      required id="title" 
+      name="title"
+       />
 
       <label for="">About</label>
-      <textarea type="text" placeholder="About" required id="about"></textarea>
+      <textarea 
+      type="text" 
+      placeholder="About" 
+      required id="about"
+      name="about"
+      ></textarea>
 
-      <label for="">Genres</label>
+       <label for="">Genres</label>
       <div>
-          <input type="radio" name="genre" value="drama" />
+          <input type="checkbox" name="genres" value="drama" />
           <label for="">Drama</label>
 
-          <input type="radio" name="genre" value="comedy" />
+          <input type="checkbox" name="genres" value="comedy" />
           <label for="">Comedy</label>
 
-          <input type="radio" name="genre" value="family" />
+          <input type="checkbox" name="genres" value="family" />
           <label for="">Family</label>
 
-          <input type="radio" name="genre" value="reality" />
+          <input type="checkbox" name="genres" value="reality" />
           <label for="">Reality</label>
 
-          <input type="radio" name="genre" value="bl" />
+          <input type="checkbox" name="genres" value="bl" />
           <label for="">BL</label>
 
-          <input type="radio" name="genre" value="actionAdventure" />
+          <input type="checkbox" name="genres" value="actionAdventure" />
           <label for="">Action & Adventure</label>
 
-          <input type="radio" name="genre" value="mystery" />
+          <input type="checkbox" name="genres" value="mystery" />
           <label for="">Mystery</label>
 
-          <input type="radio" name="genre" value="scifi" />
+          <input type="checkbox" name="genres" value="scifi" />
           <label for="">Scifi & Fantasy</label>
 
-          <input type="radio" name="genre" value="talk" />
+          <input type="checkbox" name="genres" value="talk" />
           <label for="">Talk</label>
 
-          <input type="radio" name="genre" value="warPolitics" />
+          <input type="checkbox" name="genres" value="warPolitics" />
           <label for="">War & Politics</label>
       </div>
-
-      <input type="submit" value="Add Serie" />
-  </form>
+      
+        <input type="file" name="myImage" accept="image/*">
+        
+      <button type="submit" value="Add Serie">Voeg toe</button>
+  

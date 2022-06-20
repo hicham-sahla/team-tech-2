@@ -1,0 +1,75 @@
+::placeholder {
+    font-family: $font-stack;
+    color: rgba($black, 0.5);
+}
+
+.form-form-test {
+    @include flex(column, 30px);
+
+    label {
+        @include font18;
+        font-weight: bold;
+
+        & > label {
+            margin-bottom: -30px;
+        }
+    }
+
+    & > fieldset:first-of-type {
+        label {
+            @include btn-2;
+            display: block;
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 10px;
+            font-weight: normal;
+        }
+    }
+
+    & > fieldset:last-of-type {
+        @include flex(column, 10px);
+    }
+
+    fieldset {
+        border: none;
+
+        &:nth-of-type(2) {
+            @include flex(column, 10px);
+        }
+    }
+
+    div {
+        fieldset {
+            @include grid(20px 1fr, 5px 10px);
+            align-items: center;
+
+            label {
+                font-weight: normal;
+            }
+        }
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type = 'checkbox'] {
+        width: 20px;
+        height: 20px;
+    }
+
+    input[type = 'text'], textarea {
+        @include font18;
+        padding: 13px 20px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    input[type = 'submit'] {
+       @include btn-1;
+    }
+}

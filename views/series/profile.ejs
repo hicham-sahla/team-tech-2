@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="body-profile">
+    <a class="page-title" href=""><h1>Profile</h1></a>
+    <button class="signout"></button>
+    <section class="user-avatar">
+        <h2>@ Xiao xiao</h2>
+        <img src="../dist/img/user-1.jpg" alt="Xiao xiao">
+    </section>
+    <h3>My list</h3>
+    <main class="main-profile">
+        <article>
+            <img src="../dist/img/404-cover.jpg" alt="404">
+            <form action="" method="post">
+                <button>
+                    <!-- Een if else moet hier komen zodat het hartje van de serie paars wordt ipv wit -->
+                    <span class="heart-default heart-added"></span>
+                </button>
+                <input type="hidden" name="serieId" value="" />
+            </form>
+            <h3>Tomorrow</h3>
+        </article>
+        
+        <article>
+            <img src="../dist/img/404-cover.jpg" alt="404">
+            <form action="" method="post">
+                <button>
+                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
+                    <span class="heart-default heart-added"></span>
+                </button>
+                <input type="hidden" name="serieId" value="" />
+            </form>
+            <h3>Tomorrow</h3>
+        </article>
+        <article>
+            <img src="../dist/img/404-cover.jpg" alt="404">
+            <form action="" method="post">
+                <button>
+                    <!-- Een if else moet hier komen zodat het hartje van de serie blauw wordt ipv wit -->
+                    <span class="heart-default heart-added"></span>
+                </button>
+                <input type="hidden" name="serieId" value="" />
+            </form>
+            <h3>Tomorrow</h3>
+        </article>
+    </main>
+    <script src="../dist/js/visibility.js"></script>
+</body>
+</html>

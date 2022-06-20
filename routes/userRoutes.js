@@ -12,7 +12,7 @@ router.get('/users', userController.user_index);
 router.post('/users', userController.user_create_post);
 router.get('/users/:id', userController.user_details);
 router.delete('/users/:id', userController.user_delete);
-// router.post("/edit", userController.user_update); 
+// router.post("/edit", userController.user_update);
 
 
 module.exports = router; 

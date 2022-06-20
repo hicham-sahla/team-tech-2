@@ -3,16 +3,14 @@ h1 {
     margin-bottom: 30px;
 }
 
-.body-series {
-    & > button {
-        @include btn-1;
-        display: flex;
-        padding: 10px 20px;
-        margin: 50px 0px 30px auto;
-        width: fit-content;
-        border-radius: 10px;
-        font-weight: normal;
-    }
+.add-serie {
+    @include btn-1;
+    display: block;
+    padding: 10px 20px;
+    margin: 50px 0px 30px auto;
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: normal;
 }
 
 .user-profile {
@@ -50,6 +48,10 @@ h1 {
 
 .main-series {
     @include grid(1fr 1fr, 40px 20px);
+
+    a {
+        color: $white;
+    }
 
     img {
         width: 100%;
@@ -98,4 +100,13 @@ h1 {
 
 .heart-added {
     background: url(../../dist/img/heart-added.svg) center center no-repeat;
+}
+
+.btn-contact {
+    @include btn-1;
+    display: block;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 1px solid $white;
+    text-align: center;
 }
