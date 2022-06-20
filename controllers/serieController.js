@@ -69,6 +69,10 @@ const serie_create_post = (req, res) => {
     });
 };
 
+// const serie_like_post = (req, res) => {
+//   res.render("series/index");
+// };
+
 module.exports = {
   serie_index,
   serie_details,
@@ -79,5 +83,6 @@ module.exports = {
   serie_home,
   serie_profile,
   serie_signin,
-  serie_signup
+  serie_signup,
+  //serie_like_post
 };
