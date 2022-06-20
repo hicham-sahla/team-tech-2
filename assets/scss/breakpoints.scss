@@ -94,9 +94,12 @@
         grid-row-start: 1;
         margin: auto 0px;
 
-        button {
+        div {
+            flex-direction: row;
+        }
+
+        a {
             &:first-of-type {
-                margin: 50px 30px 20px 0px;
                 width: fit-content;
             }
 

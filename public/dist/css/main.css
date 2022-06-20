@@ -59,7 +59,17 @@
   font-size: 18px;
   line-height: 30px;
 }
-.main-home button:first-of-type {
+.main-home div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+.main-home a {
+  display: block;
+  text-align: center;
+}
+.main-home a:first-of-type {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -72,21 +82,20 @@
   font-weight: bold;
   transition: 0.4s;
   cursor: pointer;
-  margin: 50px 0px 20px 0px;
 }
-.main-home button:first-of-type:hover {
+.main-home a:first-of-type:hover {
   background-color: #335b7b;
   color: white;
 }
-.main-home button:first-of-type:focus {
+.main-home a:first-of-type:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.main-home button:first-of-type:active {
+.main-home a:first-of-type:active {
   background-color: #223c52;
   color: white;
 }
-.main-home button:last-of-type {
+.main-home a:last-of-type {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -100,15 +109,15 @@
   transition: 0.4s;
   cursor: pointer;
 }
-.main-home button:last-of-type:hover {
+.main-home a:last-of-type:hover {
   background-color: white;
   color: #01235a;
 }
-.main-home button:last-of-type:focus {
+.main-home a:last-of-type:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.main-home button:last-of-type:active {
+.main-home a:last-of-type:active {
   background-color: #223c52;
   color: white;
 }
@@ -761,11 +770,13 @@ h1 {
     grid-row-start: 1;
     margin: auto 0px;
   }
-  .main-home button:first-of-type {
-    margin: 50px 30px 20px 0px;
+  .main-home div {
+    flex-direction: row;
+  }
+  .main-home a:first-of-type {
     width: fit-content;
   }
-  .main-home button:last-of-type {
+  .main-home a:last-of-type {
     width: fit-content;
   }
 
