@@ -1,7 +1,82 @@
-@import 'variables';
-@import 'general';
-@import 'form';
-@import 'users';
+@import "variables";
+@import "home";
+@import "series";
+@import "sign";
+@import "form-test";
+@import "details";
+@import "profile";
+@import "breakpoints";
 
-// import bootstrap 5 files
-@import '../../node_modules/bootstrap/scss/bootstrap';
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: $body-bg;
+  font-family: $font-stack;
+  padding: 20px;
+  color: $white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+
+  h1 {
+    margin-left: 20px + 9px;
+    &::before {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      background-image: url(../../dist/img/i-arrow.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 15px;
+
+      @media (min-width: 992px) {
+        width: 14px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+// Js
+.card {
+  transform: translateY(100px);
+  transition: 150ms;
+}
+
+.card.card-opacity {
+  opacity: 0;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}

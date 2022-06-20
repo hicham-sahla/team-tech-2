@@ -1,53 +1,68 @@
-  <h2>Add Serie</h2>
-  <form action="/series" method="POST">
-
-      <!-- <label for="">Add cover</label>
-      <input type="file" name="cover" /><br /><br /> -->
-
-      <label for="">Title</label>
-      <input 
-      type="text" 
-      placeholder="Serie name" 
-      required id="title" 
-      name="title"
-       />
-
-      <!-- <label for="">About</label>
-      <textarea type="text" placeholder="About" required id="about"></textarea>
-
-      <label for="">Genres</label>
-      <div>
-          <input type="checkbox" name="genre" value="drama" />
-          <label for="">Drama</label>
-
-          <input type="checkbox" name="genre" value="comedy" />
-          <label for="">Comedy</label>
-
-          <input type="checkbox" name="genre" value="family" />
-          <label for="">Family</label>
-
-          <input type="checkbox" name="genre" value="reality" />
-          <label for="">Reality</label>
-
-          <input type="checkbox" name="genre" value="bl" />
-          <label for="">BL</label>
-
-          <input type="checkbox" name="genre" value="actionAdventure" />
-          <label for="">Action & Adventure</label>
-
-          <input type="checkbox" name="genre" value="mystery" />
-          <label for="">Mystery</label>
-
-          <input type="checkbox" name="genre" value="scifi" />
-          <label for="">Scifi & Fantasy</label>
-
-          <input type="checkbox" name="genre" value="talk" />
-          <label for="">Talk</label>
-
-          <input type="checkbox" name="genre" value="warPolitics" />
-          <label for="">War & Politics</label>
-      </div> -->
-
-      <button type="submit" value="Add Serie">Voeg toe</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="body-form-test">
+    <a class="page-title" href=""><h1>Add Serie</h1></a>
+    <main class="main-form-test">
+        <form class="form-form-test" action="/series" method="POST">
+            <fieldset>
+                <label for="img">
+                    Add cover
+                </label>
+                <input  type="file" id="img" name="img" accept="image/*"/>
+            </fieldset>
+           
+            <fieldset>
+                <label for="title">Title</label>
+                <input type="text" placeholder="Serie name" required id="title" name="title" />
+            </fieldset>
+            
+            <div>
+                <label for="genre">Genres</label>
+                <fieldset>
+                    <input type="checkbox" id="genre-1" name="genre-1" value="drama" />
+                    <label for="genre-1">Drama</label>
+            
+                    <input type="checkbox" id="genre-2" name="genre-2" value="comedy" />
+                    <label for="genre-2">Comedy</label>
+            
+                    <input type="checkbox" id="genre-3" name="genre-3" value="family" />
+                    <label for="genre-3">Family</label>
+            
+                    <input type="checkbox" id="genre-4" name="genre-4" value="reality" />
+                    <label for="genre-4">Reality</label>
+            
+                    <input type="checkbox" id="genre-5" name="genre-5" value="bl" />
+                    <label for="genre-5">BL</label>
+            
+                    <input type="checkbox" id="genre-6" name="genre-6" value="action-adventure" />
+                    <label for="genre-6">Action & Adventure</label>
+            
+                    <input type="checkbox" id="genre-7" name="genre-7" value="mystery" />
+                    <label for="genre-7">Mystery</label>
+            
+                    <input type="checkbox" id="genre-8" name="genre-8" value="scifi-fantasy" />
+                    <label for="genre-8">Scifi & Fantasy</label>
+            
+                    <input type="checkbox" id="genre-9" name="genre-9" value="talk" />
+                    <label for="genre-9">Talk</label>
+            
+                    <input type="checkbox" id="genre-10" name="genre-10" value="war-politics" />
+                    <label for="genre-10">War & Politics</label>
+                </fieldset>
+            </div>
+            
+            <fieldset>
+                <label for="">About</label>
+                <textarea type="text" placeholder="About" required id="about"></textarea>
+            </fieldset>
+        
+            <input type="submit" value="Add Serie" />
+        </form>
+    </main>
+    <script src="../dist/js/visibility.js"></script>
+</body>
   
-  </form>
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="body-series">
+    <header>
+        <ul>
+            <% if (user) { %>
+              <li>Welcome, <%= user.email %></li>
+              <li><a href="/logout">Log out</a></li>
+            <% } else { %>
+              <li><a href="/login">Log in</a></li>
+              <li><a href="/signup" class="btn">Sign up</a></li>
+            <% } %>
+          </ul>
+    </header>
+    <h1>Choose Series</h1>
+
+    <!-- Als de gebruiker een account heeft, wordt de avatar en username getoond -->
+    <a class="user-profile" href="">
+        <section>
+            <h2>Xiao xiao</h2>
+            <img src="../dist/img/user-1.jpg" alt="Xiao xiao">
+        </section>
+    </a>
+
+    <button>Add Series</button>
+
+    <main class="main-series">
+        <% series.forEach(serie => { %>
+            <article class="card">
+                <a href="/series/<%= serie._id %>">
+                    <img src="../dist/img/404-cover.jpg" alt="404">
+                    <form action="" method="post">
+                        <button>
+                            <!-- Een if else moet hier komen zodat het hartje van de serie paars wordt ipv wit -->
+                            <span class="heart-default"></span>
+                        </button>
+                        <input type="hidden" name="serieId" value="" />
+                    </form>
+                    <h3><%= serie.title %></h3>
+                </a>
+            </article>
+       <% }) %>
+    </main>
+    <script src="../dist/js/visibility.js"></script>
+    <script src="../dist/js/serries.js"></script>
+</body>
+</html>
