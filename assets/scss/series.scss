@@ -97,3 +97,12 @@ h1 {
 .heart-added {
     background: url(../../dist/img/heart-added.svg) center center no-repeat;
 }
+
+.btn-contact {
+    @include btn-1;
+    display: block;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 1px solid $white;
+    text-align: center;
+}

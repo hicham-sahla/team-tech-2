@@ -61,9 +61,6 @@
         }
     }
 
-    // Form-test
-
-
     // Home
     .body-home {
         @include grid(500px 1fr, 50px);
@@ -87,6 +84,10 @@
         & > div {
             padding: 50px;
         }
+    }
+
+    .btn-contact {
+        width: fit-content;
     }
 
     .main-home {
