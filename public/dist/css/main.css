@@ -17,7 +17,6 @@ body::before {
   border-bottom: 2px solid black;
   content: "Error: It's not clear which file to import. Found:\a   assets/scss/_breakpoints.scss\a   assets/scss/breakpoints.scss\a   \2577 \a 8 \2502  @import \"breakpoints\";\a   \2502          ^^^^^^^^^^^^^\a   \2575 \a   assets/scss/main.scss 8:9  root stylesheet";
 }
-<<<<<<< Updated upstream
 
 .header-home {
   position: relative;
@@ -1056,5 +1055,3 @@ a {
   transform: translateY(0);
   opacity: 1;
 }
-=======
->>>>>>> Stashed changes
