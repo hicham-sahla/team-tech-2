@@ -1,5 +1,4 @@
-
-const Serie = require("../models/Series");
+const Serie = require("../models/Serie");
 
 const serie_index = (req, res) => {
   Serie.find()
@@ -57,12 +56,13 @@ const serie_signup = (req, res) => {
 };
 
 const serie_create_post = (req, res) => {
-  const serie = new Serie(req.body);
-
+   const serie = new Serie(req.body);
+ 
   serie
     .save()
     .then((result) => {
-      res.redirect("/series");
+      result,
+      res.send("Gelukt");
     })
     .catch((err) => {
       console.log(err);
@@ -90,6 +90,7 @@ app.post("/profile/:userId/:slug", async (req, res) => {
   const url = `/profile/${req.params.userId}/${req.params.slug}`;
   res.redirect(url);
 });
+
 
 module.exports = {
   serie_index,
