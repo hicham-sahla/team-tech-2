@@ -64,6 +64,9 @@ module.exports.signup_post = async (req, res) => {
  
 }
 
+
+
+
 module.exports.login_post = async (req, res) => {
   const { email, password } = req.body;
 
@@ -79,6 +82,18 @@ module.exports.login_post = async (req, res) => {
   }
 
 }
+module.exports.serie_like_post = (req, res) => {
+  jwt.verify(token, 'secret', (err, user) => {
+    if (err) console.log(err) // eg. invalid token, or expired token
+    const newLike = req.body.like
+    const filter = { _id: user.id }
+    const update = { likes: user.likes }
+    req.user = user
+    user.likes.push(newLike)
+    User.findOneAndUpdate(filter, update)
+      .then(() => res.redirect('series/index'))
+    })
+};
 
 module.exports.logout_get = (req, res) => {
   res.cookie('jwt', '', { maxAge: 1 });

@@ -721,9 +721,14 @@ h1 {
 }
 
 @media (min-width: 576px) {
-  .header-home, .main-home, .body-series,
-.body-form-test, .body-details, .body-profile, .body-signin, .body-signup,
-.body-contact {
+  .header-home,
+.main-home,
+.body-series,
+.body-form-test,
+.body-details,
+.body-profile,
+.body-signin,
+.body-signup {
     width: 500px;
     margin: auto;
   }
@@ -801,22 +806,16 @@ h1 {
     padding: 50px;
   }
 
-  .btn-contact {
-    width: fit-content;
-  }
-
   .main-home {
     grid-row-start: 0;
     grid-row-start: 1;
     margin: auto 0px;
   }
-  .main-home div {
-    flex-direction: row;
-  }
-  .main-home a:first-of-type {
+  .main-home button:first-of-type {
+    margin: 50px 30px 20px 0px;
     width: fit-content;
   }
-  .main-home a:last-of-type {
+  .main-home button:last-of-type {
     width: fit-content;
   }
 
@@ -824,8 +823,7 @@ h1 {
     width: 100%;
     padding: 50px 150px;
   }
-
-  .add-serie {
+  .body-series > button {
     padding: 25px 30px;
     border-radius: 20px;
     font-weight: bold;
@@ -958,12 +956,14 @@ h1 {
     line-height: 30px;
   }
 
-  .body-signin, .body-signup, .body-contact {
+  .body-signin,
+.body-signup {
     width: 100%;
     padding: 50px 150px;
   }
 
-  .main-signin form, .main-signup form, .main-contact form {
+  .main-signin form,
+.main-signup form {
     width: 350px;
   }
 }
