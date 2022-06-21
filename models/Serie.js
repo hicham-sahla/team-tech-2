@@ -11,8 +11,7 @@ const serieSchema = new Schema({
     required: true,
   },
   img:  {
-      data: Buffer,
-      contentType: String
+      type: String,
     },
   
   genres: [{

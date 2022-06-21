@@ -23,7 +23,7 @@
       <% series.forEach(serie => { %>
       <article class="card">
         <a href="/series/<%= serie._id %>">
-          <img src="../dist/img/404-cover.jpg" alt="404" />
+          <img src="<%= serie.img %> " alt="404" />
           <% if(user.likes.includes(serie._id)) { %> 
           <form action="/dislike/<%= user._id %>" method="post">
             <button type="submit">
