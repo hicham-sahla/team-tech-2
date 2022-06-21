@@ -4,11 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require("path");
 const mongoose = require("mongoose");
-const cookieParser = require('cookie-parser');
-const compression = require('compression');
-const { requireAuth, checkUser } = require('./middleware/authMiddleware');
+const cookieParser = require("cookie-parser");
+const compression = require("compression");
+const { checkUser } = require("./middleware/authMiddleware");
 const connectDB = require("./config/dbConn");
-
 
 // Defining routes
 const serieRoutes = require("./routes/serieRoutes");
@@ -28,8 +27,8 @@ app.use(compression());
 app.set("view engine", "ejs");
 
 // Using routes
-app.get('*', checkUser);
-app.get('/', (req, res) => res.render('pages/home'));
+app.get("*", checkUser);
+app.get("/", (req, res) => res.render("pages/home"));
 
 app.use(serieRoutes);
 app.use(authRoutes);

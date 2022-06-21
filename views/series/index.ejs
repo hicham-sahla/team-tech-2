@@ -25,14 +25,14 @@
         <a href="/series/<%= serie._id %>">
           <img src="../dist/img/404-cover.jpg" alt="404" />
           <% if(user.likes.includes(serie._id)) { %> 
-          <form action="/series-dislike/<%= user._id %>" method="post">
+          <form action="/dislike/<%= user._id %>" method="post">
             <button type="submit">
               <span class="heart-default "></span>
             </button>
             <input type="hidden" name="serieId" value="<%= serie._id %>" />
           </form>
           <% } else { %>
-            <form action="/series/<%= user._id %>" method="post">
+            <form action="/like/<%= user._id %>" method="post">
               <button type="submit">
                 <span class="heart-default "></span>
               </button>
