@@ -14,9 +14,9 @@
   <main class="main-details">
       <h1><%= series.title %></h1>
       <ul class="header-genres">
-        <li>drama</li>
-        <li>scifi-fantasy</li>
-        <li>action-adventure</li>
+        <% series.genres.forEach(genre => { %>
+          <li><%= genre.charAt(0).toUpperCase() + genre.slice(1)%></li>
+        <%}); %>
     </ul>
     <h2>About</h2>
     <p><%= series.about %></p>

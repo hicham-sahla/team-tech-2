@@ -34,7 +34,7 @@ app.get("*", checkUser);
 app.get("/", (req, res) => {
   Serie.find()
   .lean()
-  .sort({title: -1})
+  .sort({title: 1}) // Hij filtert abc
   .then(result => {
     const firstObItem = result[0]
     res.render("pages/home", {series: firstObItem});

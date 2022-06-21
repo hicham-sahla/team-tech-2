@@ -6,19 +6,16 @@
 <body class="body-home">
     <header class="header-home">
         <div>
-            
             <h2><%= series.title %></h2>
 
-            <!-- Hier moet een foreach komen waarbij de genres van de series van de database wordt weergegeven -->
             <ul class="header-genres">
-                <li>drama</li>
-                <li>scifi-fantasy</li>
-                <li>action-adventure</li>
+                <% series.genres.forEach(genre => { %>
+                    <li><%= genre.charAt(0).toUpperCase() + genre.slice(1)%></li>
+                <%}); %>
             </ul>
         </div>
 
-        <!-- Toon hier de eerste serie van de database -->
-        <img src="../dist/img/title-3.jpg" alt="Tomorrow">
+        <img src="<%= series.img %>" alt="<%= series.title %>">
         
         <div class="overlay-home"></div>
     </header>
