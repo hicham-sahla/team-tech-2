@@ -219,36 +219,6 @@ h1 {
   background: url(../../../dist/img/heart-active.svg) center center no-repeat;
 }
 
-.btn-contact {
-  font-size: 18px;
-  line-height: 30px;
-  padding: 25px 30px;
-  width: 100%;
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 20px;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  transition: 0.4s;
-  cursor: pointer;
-  display: block;
-  margin-top: 50px;
-  text-align: center;
-}
-.btn-contact:hover {
-  background-color: white;
-  color: #01235a;
-}
-.btn-contact:focus {
-  background-color: #95c3ea;
-  color: #01235a;
-}
-.btn-contact:active {
-  background-color: #223c52;
-  color: white;
-}
-
 .header-series {
   margin-bottom: 30px;
 }
