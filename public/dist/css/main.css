@@ -496,7 +496,7 @@ h1 {
   left: 20px;
   top: 50px;
   content: "";
-  background-image: url(../../dist/img/i-arrow.svg);
+  background-image: url(../../../dist/img/i-arrow.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 17px;
