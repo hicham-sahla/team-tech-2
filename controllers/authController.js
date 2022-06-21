@@ -87,9 +87,13 @@ module.exports.serie_like_post = (req, res) => {
     console.log(req.user)
     req.users = user; // niet beschikbaar - undefined
     
+    if(!user.likes) {
+      user.likes = []
+    }
+
     user.likes.push(newLike); // push is undefined want bovenstaande zijn niet beschikbaar
     User.findOneAndUpdate(filter, update).then(() =>
-      res.redirect("series/index")
+      res.redirect("/series")
     );
   });
 };
