@@ -7,11 +7,14 @@
     <a class="page-title" href="/series"><h1>Add serie</h1></a>
     <main class="main-create">
         <form action="/series" method="POST">
-            <label for="">Title</label>
+            <label for="title">Title</label>
             <input type="text"  placeholder="Serie name" required id="title" name="title" />
 
-            <label for="">About</label>
+            <label for="about">About</label>
             <textarea type="text" placeholder="About" required id="about" name="about" ></textarea>
+
+            <label for="img">Image url</label>
+            <input type="url"  placeholder="Serie image url" required id="img" name="img" />
 
             <label for="">Genres</label>
             <div>
@@ -45,8 +48,7 @@
                 <input type="checkbox" name="genres" value="warPolitics" />
                 <label for="">War & Politics</label>
             </div>
-            
-            <input type="file" name="myImage" accept="image/*">
+        
             <button type="submit" value="Add Serie">Add Serie</button>
         </form>
     </main>

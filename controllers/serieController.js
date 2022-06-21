@@ -35,7 +35,7 @@ const serie_create_post = (req, res) => {
   serie
     .save()
     .then((result) => {
-      result, res.send("Gelukt");
+      result, res.redirect("/series");
     })
     .catch((err) => {
       console.log(err);
