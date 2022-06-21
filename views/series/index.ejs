@@ -27,14 +27,14 @@
           <% if(user.likes.includes(serie._id)) { %> 
           <form action="/dislike/<%= user._id %>" method="post">
             <button type="submit">
-              <span class="heart-default "></span>
+              <span class="heart-added "></span>
             </button>
             <input type="hidden" name="serieId" value="<%= serie._id %>" />
           </form>
           <% } else { %>
             <form action="/like/<%= user._id %>" method="post">
               <button type="submit">
-                <span class="heart-default heart-added "></span>
+                <span class="heart-added heart-default "></span>
               </button>
               <input type="hidden" name="serieId" value="<%= serie._id %>" />
             </form>
