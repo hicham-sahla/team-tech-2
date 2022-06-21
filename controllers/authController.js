@@ -75,7 +75,7 @@ module.exports.login_post = async (req, res) => {
     res.status(400).json({ errors });
   }
 
-}
+};
 
 module.exports.serie_like_post = (req, res) => {
   const token = req.cookies.jwt;
