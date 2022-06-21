@@ -40,15 +40,15 @@ const createToken = (id) => {
 };
 
 // controller actions
-module.exports.signup_get = (req, res) => {
+const signup_get = (req, res) => {
   res.render("auth/signup");
 };
 
-module.exports.login_get = (req, res) => {
+const login_get = (req, res) => {
   res.render("auth/login");
 };
 
-module.exports.signup_post = async (req, res) => {
+const signup_post = async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -62,7 +62,7 @@ module.exports.signup_post = async (req, res) => {
   }
 };
 
-module.exports.login_post = async (req, res) => {
+const login_post = async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -74,53 +74,56 @@ module.exports.login_post = async (req, res) => {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
   }
-
 };
 
-module.exports.serie_like_post = (req, res) => {
+const user_like_post = (req, res) => {
   const token = req.cookies.jwt;
   jwt.verify(token, "secret", async (err, decodedToken) => {
     if (err) console.log(err); // eg. invalid token, or expired token
     let user = await User.findById(decodedToken.id);
-    const newLike = req.body.serieId; // wel beschikbaar
-    const filter = { _id: user.id };  // wel beschikbaar
-    const update = { likes: user.likes }; // niet beschikbaar - undefined
-    console.log(user, 'Testuser')    
-    if(!user.likes) {
-      user.likes = []
+    const newLike = req.body.serieId;
+    const filter = { _id: user.id };
+    const update = { likes: user.likes };
+    if (!user.likes) {
+      user.likes = [];
     }
 
     user.likes.push(newLike); // push is undefined want bovenstaande zijn niet beschikbaar
-    User.findOneAndUpdate(filter, update).then(() =>
-      res.redirect("/series")
-    );
+    User.findOneAndUpdate(filter, update).then(() => res.redirect("/series"));
   });
 };
 
-module.exports.serie_dislike_post = (req, res) => {
+const user_dislike_post = (req, res) => {
   const token = req.cookies.jwt;
   jwt.verify(token, "secret", async (err, decodedToken) => {
     if (err) console.log(err); // eg. invalid token, or expired token
     let user = await User.findById(decodedToken.id);
-    const newLike = req.body.serieId; // wel beschikbaar
-    const filter = { _id: user.id };  // wel beschikbaar
-    if(!user.likes) {
-      user.likes = []
+    const newLike = req.body.serieId;
+    const filter = { _id: user.id };
+    if (!user.likes) {
+      user.likes = [];
     }
-    const filteredLikesList = user.likes.filter(like => {
-      console.log(like !== newLike)
-      return like !== newLike
-    } )
-    const update = {likes: filteredLikesList};
-    console.log(filteredLikesList)
+    const filteredLikesList = user.likes.filter((like) => {
+      return like !== newLike;
+    });
+    const update = { likes: filteredLikesList };
     User.findOneAndUpdate(filter, update).then(() => {
-      res.redirect("/series")
-    },
-    );
+      res.redirect("/series");
+    });
   });
 };
 
-module.exports.logout_get = (req, res) => {
+const logout_get = (req, res) => {
   res.cookie("jwt", "", { maxAge: 1 });
   res.redirect("/");
+};
+
+module.exports = {
+  signup_get,
+  signup_post,
+  login_get,
+  login_post,
+  user_like_post,
+  user_dislike_post,
+  logout_get,
 };

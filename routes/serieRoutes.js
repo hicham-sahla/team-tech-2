@@ -1,6 +1,6 @@
 const express = require('express');
 const serieController = require('../controllers/serieController');
-const { requireAuth, checkUser } = require('../middleware/authMiddleware');
+const { requireAuth } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
