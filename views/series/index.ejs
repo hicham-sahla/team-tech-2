@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head'); %>
-</head>
-<body class="body-series">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="body-series">
     <header>
-        <ul>
-            <% if (user) { %>
-              <li>Welcome, <%= user.email %></li>
-              <li><a href="/logout">Log out</a></li>
-            <% } else { %>
-              <li><a href="/login">Log in</a></li>
-              <li><a href="/signup" class="btn">Sign up</a></li>
-            <% } %>
-          </ul>
+      <ul>
+        <% if (user) { %>
+        <li>Welcome, <%= user.email %></li>
+        <li><a href="/logout">Log out</a></li>
+        <% } else { %>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/signup" class="btn">Sign up</a></li>
+        <% } %>
+      </ul>
     </header>
     <h1>Choose Series</h1>
 
     <!-- Als de gebruiker een account heeft, wordt de avatar en username getoond -->
     <a class="user-profile" href="">
-        <section>
-            <h2>Xiao xiao</h2>
-            <img src="../dist/img/user-1.jpg" alt="Xiao xiao">
-        </section>
+      <section>
+        <h2>Xiao xiao</h2>
+        <img src="../dist/img/user-1.jpg" alt="Xiao xiao" />
+      </section>
     </a>
 
     <a class="add-serie" href="">Add Series</a>
 
     <main class="main-series">
-        <% series.forEach(serie => { %>
-            <article class="card">
-                <a href="/series/<%= serie._id %>">
-                    <img src="../dist/img/404-cover.jpg" alt="404">
-                    <!-- <form action="/series/<%= user._id %>" method="post">
-                        <button>
-                          <span class="heart-add heart-added"></span>
-                          <% } else { %>
-                          <span class="heart-add"></span>
-                          <% } %>
-                        </button>
-                        <input type="hidden" name="kdramaId" value="<%=kdrama._id%>" />
-                      </form> -->
-                    <h3><%= serie.title %></h3>
-                </a>
-            </article>
-       <% }) %>
+      <% series.forEach(serie => { %>
+      <article class="card">
+        <!-- <a href="/series/<%= serie._id %>"> -->
+          <img src="../dist/img/404-cover.jpg" alt="404" />
+          <form action="/series/<%= user._id %>" method="post">
+            <button>
+              <% console.log(user.likes) %> <%
+              if(user.likes.includes(String(serie._id))) {%>
+              <span class="heart-add heart-added">asd</span>
+              <% } else { %>
+              <span class="heart-add">adsd</span>
+              <% } %>
+            </button>
+            <input type="hidden" name="kdramaId" value="<%=serie._id%>" />
+          </form>
+          <h3><%= serie.title %></h3>
+        // </a>
+      </article>
+      <% }) %>
     </main>
     <a class="btn-contact" href="">Give feedback</a>
     <script src="../dist/js/visibility.js"></script>
     <script src="../dist/js/serries.js"></script>
-</body>
+  </body>
 </html>
