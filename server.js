@@ -2,16 +2,18 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const compression = require("compression");
 const path = require("path");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const compression = require("compression");
 const { checkUser } = require("./middleware/authMiddleware");
 const connectDB = require("./config/dbConn");
 
 // Defining routes
 const serieRoutes = require("./routes/serieRoutes");
 const authRoutes = require("./routes/authRoutes");
+
+const Serie = require("./models/Serie");
 
 // Connect to MongoDB
 connectDB();
@@ -28,7 +30,16 @@ app.set("view engine", "ejs");
 
 // Using routes
 app.get("*", checkUser);
-app.get("/", (req, res) => res.render("pages/home"));
+//app.get("/", (req, res) => res.render("pages/home"));
+app.get("/", (req, res) => {
+  Serie.find()
+  .lean()
+  .sort({title: 1}) // Hij filtert abc
+  .then(result => {
+    const firstObItem = result[0]
+    res.render("pages/home", {series: firstObItem});
+  })
+})
 
 app.use(serieRoutes);
 app.use(authRoutes);
