@@ -307,13 +307,11 @@ h1 {
   font-size: 18px;
   line-height: 30px;
   padding: 13px 20px;
+  margin-bottom: 30px;
   border: none;
   border-radius: 10px;
 }
-.main-signin input:first-of-type {
-  margin-bottom: 30px;
-}
-.main-signin input:last-of-type {
+.main-signin button {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -327,15 +325,15 @@ h1 {
   transition: 0.4s;
   cursor: pointer;
 }
-.main-signin input:last-of-type:hover {
+.main-signin button:hover {
   background-color: #335b7b;
   color: white;
 }
-.main-signin input:last-of-type:focus {
+.main-signin button:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.main-signin input:last-of-type:active {
+.main-signin button:active {
   background-color: #223c52;
   color: white;
 }
@@ -365,7 +363,7 @@ h1 {
   border: none;
   border-radius: 10px;
 }
-.main-signup input:last-of-type {
+.main-signup button {
   font-size: 18px;
   line-height: 30px;
   padding: 25px 30px;
@@ -378,17 +376,16 @@ h1 {
   font-weight: bold;
   transition: 0.4s;
   cursor: pointer;
-  margin-top: 20px;
 }
-.main-signup input:last-of-type:hover {
+.main-signup button:hover {
   background-color: #335b7b;
   color: white;
 }
-.main-signup input:last-of-type:focus {
+.main-signup button:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
-.main-signup input:last-of-type:active {
+.main-signup button:active {
   background-color: #223c52;
   color: white;
 }
@@ -1013,7 +1010,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   content: "";
-  background-image: url(../../dist/img/i-arrow.svg);
+  background-image: url(../../../dist/img/i-arrow.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 9px;

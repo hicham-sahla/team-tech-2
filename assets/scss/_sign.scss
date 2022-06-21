@@ -23,23 +23,20 @@ h1 {
     input {
         @include font18;
         padding: 13px 20px;
+        margin-bottom: 30px;
         border: none;
         border-radius: 10px;
+    }
 
-        &:first-of-type {
-            margin-bottom: 30px;
-        }
-
-        &:last-of-type {
-            @include btn-1;
-        }
+    button {
+        @include btn-1;
     }
 }
 
 // Signup
 .main-signup {
     form {
-        @include flex(column, 10px);
+    @include flex(column, 10px);
     }
 
     h2 {
@@ -60,11 +57,10 @@ h1 {
         margin-bottom: 30px;
         border: none;
         border-radius: 10px;
+    }
 
-        &:last-of-type {
-            @include btn-1;
-            margin-top: 20px;
-        }
+    button {
+        @include btn-1;
     }
 }
 
