@@ -29,16 +29,6 @@ const serie_create_get = (req, res) => {
   res.render("series/create");
 };
 
-const serie_home = (req, res) => {
-  Serie.find()
-  .lean()
-  .sort({title: -1}) // Hij gaat filter op abc
-  .then(result => { 
-    const firstDbItem = result[0] 
-    res.render("series/home", {series: firstDbItem});
-  });
-};
-
 const serie_create_post = (req, res) => {
    const serie = new Serie(req.body);
  

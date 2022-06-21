@@ -14,6 +14,9 @@ const connectDB = require("./config/dbConn");
 const serieRoutes = require("./routes/serieRoutes");
 const authRoutes = require("./routes/authRoutes");
 
+// Defining models
+const Serie = require("../models/Serie");
+
 // Connect to MongoDB
 connectDB();
 
@@ -29,7 +32,16 @@ app.set("view engine", "ejs");
 
 // Using routes
 app.get('*', checkUser);
-app.get('/', (req, res) => res.render('pages/home'));
+app.get('/', (req, res) => {
+  Serie.find()
+  .lean()
+  .sort({title: -1}) // Hij gaat filter op abc
+  .then(result => { 
+    const firstDbItem = result[0] 
+    res.render("pages/home", {series: firstDbItem});
+  });
+});
+
 app.use(serieRoutes);
 app.use(authRoutes);
 
