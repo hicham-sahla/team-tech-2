@@ -13,39 +13,6 @@ h1 {
     font-weight: normal;
 }
 
-.user-profile {
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    color: $white;
-
-    img {
-        order: -1;
-        width: 70px;
-        border-radius: 50%;
-        transition: $trans4;
-    }
-
-    section {
-        @include flex(row, 20px);
-        align-items: center;
-
-        h2 {
-            @include font16;
-            font-weight: normal;
-            transition: $trans4;
-        }
-    }
-
-    &:hover img {
-        transform: scale(1.1);
-    }
-
-    &:hover h2 {
-        color: $blue-light-focus;
-    }
-}
-
 .main-series {
     @include grid(1fr 1fr, 40px 20px);
 
@@ -103,10 +70,32 @@ h1 {
 }
 
 .btn-contact {
-    @include btn-1;
+    @include btn-2;
     display: block;
     margin-top: 50px;
-    background-color: transparent;
-    border: 1px solid $white;
     text-align: center;
+}
+
+.header-series {
+    margin-bottom: 30px;
+
+    ul {
+        @include flex(column, 30px);
+
+        li:first-of-type {
+            @include font26;
+            font-weight: bold;
+        }
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.logout {
+    @include btn-2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: fit-content;
 }

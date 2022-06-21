@@ -166,37 +166,6 @@ h1 {
   color: white;
 }
 
-.user-profile {
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  color: white;
-}
-.user-profile img {
-  order: -1;
-  width: 70px;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-.user-profile section {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-}
-.user-profile section h2 {
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: normal;
-  transition: 0.4s;
-}
-.user-profile:hover img {
-  transform: scale(1.1);
-}
-.user-profile:hover h2 {
-  color: #95c3ea;
-}
-
 .main-series {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,8 +224,8 @@ h1 {
   line-height: 30px;
   padding: 25px 30px;
   width: 100%;
-  background-color: #4479a4;
-  border: 1px solid transparent;
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 20px;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -265,19 +234,64 @@ h1 {
   cursor: pointer;
   display: block;
   margin-top: 50px;
-  background-color: transparent;
-  border: 1px solid white;
   text-align: center;
 }
 .btn-contact:hover {
-  background-color: #335b7b;
-  color: white;
+  background-color: white;
+  color: #01235a;
 }
 .btn-contact:focus {
   background-color: #95c3ea;
   color: #01235a;
 }
 .btn-contact:active {
+  background-color: #223c52;
+  color: white;
+}
+
+.header-series {
+  margin-bottom: 30px;
+}
+.header-series ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.header-series ul li:first-of-type {
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: bold;
+}
+.header-series a {
+  display: block;
+}
+
+.logout {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 25px 30px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+}
+.logout:hover {
+  background-color: white;
+  color: #01235a;
+}
+.logout:focus {
+  background-color: #95c3ea;
+  color: #01235a;
+}
+.logout:active {
   background-color: #223c52;
   color: white;
 }
@@ -709,6 +723,10 @@ h1 {
   .user-profile section h2 {
     font-size: 26px;
     line-height: 31px;
+  }
+
+  .btn-contact {
+    width: fit-content;
   }
 
   .main-details h1 {
