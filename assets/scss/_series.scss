@@ -81,7 +81,7 @@ h1 {
 
 .heart-default {
     display: block;
-    background: url(heart-default.svg) center center no-repeat;
+    background: url(../../../dist/img/heart-default.svg) center center no-repeat;
     background-size: contain;
     background-repeat: no-repeat;
     height: 40px;
@@ -91,15 +91,15 @@ h1 {
 }
 
 .heart-default:hover {
-    background: url(heart-hover.svg) center center no-repeat;
+    background: url(../../../dist/img/heart-hover.svg) center center no-repeat;
 }
 
 .heart-default:active {
-    background: url(heart-active.svg) center center no-repeat;
+    background: url(../../../dist/img/heart-active.svg) center center no-repeat;
 }
 
 .heart-added {
-    background: url(heart-added.svg) center center no-repeat;
+    background: url(../../../dist/img/heart-added.svg) center center no-repeat;
 }
 
 .btn-contact {

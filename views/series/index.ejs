@@ -28,25 +28,21 @@
     <a class="add-serie" href="">Add Series</a>
 
     <main class="main-series">
-      <% series.forEach(serie => { %>
-      <article class="card">
-        <!-- <a href="/series/<%= serie._id %>"> -->
-          <img src="../dist/img/404-cover.jpg" alt="404" />
-          <form action="/series/<%= user._id %>" method="post">
-            <button>
-              <% console.log(user.likes) %> <%
-              if(user.likes.includes(String(serie._id))) {%>
-              <span class="heart-add heart-added">asd</span>
-              <% } else { %>
-              <span class="heart-add">adsd</span>
-              <% } %>
-            </button>
-            <input type="hidden" name="kdramaId" value="<%=serie._id%>" />
-          </form>
-          <h3><%= serie.title %></h3>
-        // </a>
-      </article>
-      <% }) %>
+        <% series.forEach(serie => { %>
+            <article class="card">
+                <a href="/series/<%= serie._id %>">
+                    <img src="../dist/img/404-cover.jpg" alt="404">
+                    <form action="/series/<%= user._id %>" method="post">
+                      <button>
+                          <!-- Een if else moet hier komen zodat het hartje van de serie paars wordt ipv wit -->
+                          <span class="heart-default"></span>
+                      </button>
+                      <input type="hidden" name="serieId" value="<%= serie._id %>" />
+                  </form>
+                    <h3><%= serie.title %></h3>
+                </a>
+            </article>
+       <% }) %>
     </main>
     <a class="btn-contact" href="">Give feedback</a>
     <script src="../dist/js/visibility.js"></script>

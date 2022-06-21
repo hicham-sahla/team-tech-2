@@ -74,7 +74,9 @@ module.exports.login_post = async (req, res) => {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
   }
-};
+
+}
+
 module.exports.serie_like_post = (req, res) => {
   const token = req.cookies.jwt;
   jwt.verify(token, "secret", (err, user) => {
