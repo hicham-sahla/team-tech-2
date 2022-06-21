@@ -34,7 +34,7 @@
           <% } else { %>
             <form action="/like/<%= user._id %>" method="post">
               <button type="submit">
-                <span class="heart-added "></span>
+                <span class="heart-default heart-added "></span>
               </button>
               <input type="hidden" name="serieId" value="<%= serie._id %>" />
             </form>

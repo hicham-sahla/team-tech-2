@@ -59,13 +59,6 @@ h1 {
 
 .heart-added {
     background: url(../../../dist/img/heart-added.svg) center center no-repeat;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 45px;
-    transition: .4s;
-    cursor: pointer;
 }
 
 .heart-default:hover {
