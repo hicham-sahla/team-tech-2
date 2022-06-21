@@ -59,14 +59,32 @@ h1 {
 
 .heart-default:hover {
     background: url(../../../dist/img/heart-hover.svg) center center no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 45px;
+    transition: .4s;
+    cursor: pointer;
 }
 
 .heart-default:active {
     background: url(../../../dist/img/heart-active.svg) center center no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 45px;
+    transition: .4s;
+    cursor: pointer;
 }
 
 .heart-added {
     background: url(../../../dist/img/heart-added.svg) center center no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 45px;
+    transition: .4s;
+    cursor: pointer;
 }
 
 .btn-contact {
