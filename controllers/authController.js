@@ -75,21 +75,47 @@ module.exports.login_post = async (req, res) => {
     res.status(400).json({ errors });
   }
 
-}
+};
 
 module.exports.serie_like_post = (req, res) => {
   const token = req.cookies.jwt;
-  jwt.verify(token, "secret", (err, user) => {
+  jwt.verify(token, "secret", async (err, decodedToken) => {
     if (err) console.log(err); // eg. invalid token, or expired token
+    let user = await User.findById(decodedToken.id);
     const newLike = req.body.serieId; // wel beschikbaar
     const filter = { _id: user.id };  // wel beschikbaar
     const update = { likes: user.likes }; // niet beschikbaar - undefined
-    console.log(req.user)
-    req.users = user; // niet beschikbaar - undefined
-    
+    console.log(user, 'Testuser')    
+    if(!user.likes) {
+      user.likes = []
+    }
+
     user.likes.push(newLike); // push is undefined want bovenstaande zijn niet beschikbaar
     User.findOneAndUpdate(filter, update).then(() =>
-      res.redirect("series/index")
+      res.redirect("/series")
+    );
+  });
+};
+
+module.exports.serie_dislike_post = (req, res) => {
+  const token = req.cookies.jwt;
+  jwt.verify(token, "secret", async (err, decodedToken) => {
+    if (err) console.log(err); // eg. invalid token, or expired token
+    let user = await User.findById(decodedToken.id);
+    const newLike = req.body.serieId; // wel beschikbaar
+    const filter = { _id: user.id };  // wel beschikbaar
+    if(!user.likes) {
+      user.likes = []
+    }
+    const filteredLikesList = user.likes.filter(like => {
+      console.log(like !== newLike)
+      return like !== newLike
+    } )
+    const update = {likes: filteredLikesList};
+    console.log(filteredLikesList)
+    User.findOneAndUpdate(filter, update).then(() => {
+      res.redirect("/series")
+    },
     );
   });
 };

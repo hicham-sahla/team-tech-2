@@ -3,11 +3,11 @@
   .header-home,
   .main-home,
   .body-series,
-  .body-form-test,
   .body-details,
   .body-profile,
   .body-signin,
-  .body-signup {
+  .body-signup,
+  .body-create {
     @include max500;
   }
 }
@@ -47,6 +47,10 @@
   // Series
   .user-profile section h2 {
     @include font26;
+  }
+
+  .btn-contact {
+    width: fit-content;
   }
 
   // Details
@@ -140,48 +144,6 @@
     width: 57px;
   }
 
-  // Form-test
-  .body-form-test {
-    @include width100;
-  }
-
-  .form-form-test {
-    @include grid(360px 1fr, 30px 100px);
-
-    fieldset {
-      &:nth-of-type(2) {
-        grid-column-start: 1;
-        grid-column-end: 2;
-      }
-      &:last-of-type {
-        grid-row-start: 3;
-        grid-row-end: 5;
-      }
-    }
-
-    div {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 4;
-
-      fieldset {
-        @include grid(20px 150px 20px 1fr, 5px 10px);
-      }
-    }
-
-    & > input {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 4;
-      grid-row-end: 5;
-    }
-
-    input[type="submit"] {
-      width: 300px;
-    }
-  }
-
   // Details
   .body-details {
     @include grid(500px 1fr, 50px);
@@ -255,12 +217,14 @@
 
   // Signin
   .body-signin,
-  .body-signup {
+  .body-signup,
+  .body-create {
     @include width100;
   }
 
   .main-signin form,
-  .main-signup form {
+  .main-signup form,
+  .main-create form {
     width: 350px;
   }
 }

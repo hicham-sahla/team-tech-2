@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="body-create">
+    <a class="page-title" href="/series"><h1>Add serie</h1></a>
+    <main class="main-create">
+        <form action="/series" method="POST">
+            <label for="">Title</label>
+            <input type="text"  placeholder="Serie name" required id="title" name="title" />
+
+            <label for="">About</label>
+            <textarea type="text" placeholder="About" required id="about" name="about" ></textarea>
+
+            <label for="">Genres</label>
+            <div>
+                <input type="checkbox" name="genres" value="drama" />
+                <label for="">Drama</label>
+
+                <input type="checkbox" name="genres" value="comedy" />
+                <label for="">Comedy</label>
+
+                <input type="checkbox" name="genres" value="family" />
+                <label for="">Family</label>
+
+                <input type="checkbox" name="genres" value="reality" />
+                <label for="">Reality</label>
+
+                <input type="checkbox" name="genres" value="bl" />
+                <label for="">BL</label>
+
+                <input type="checkbox" name="genres" value="actionAdventure" />
+                <label for="">Action & Adventure</label>
+
+                <input type="checkbox" name="genres" value="mystery" />
+                <label for="">Mystery</label>
+
+                <input type="checkbox" name="genres" value="scifi" />
+                <label for="">Scifi & Fantasy</label>
+
+                <input type="checkbox" name="genres" value="talk" />
+                <label for="">Talk</label>
+
+                <input type="checkbox" name="genres" value="warPolitics" />
+                <label for="">War & Politics</label>
+            </div>
+            
+            <input type="file" name="myImage" accept="image/*">
+            <button type="submit" value="Add Serie">Add Serie</button>
+        </form>
+    </main>
+    <script src="../dist/js/visibility.js"></script>
+</body>
+</html>

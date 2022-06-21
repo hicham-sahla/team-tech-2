@@ -2,9 +2,9 @@
 @import "home";
 @import "series";
 @import "sign";
-@import "form-test";
 @import "details";
 @import "profile";
+@import "create";
 @import "breakpoints";
 
 * {
@@ -52,7 +52,7 @@ a {
       top: 50%;
       transform: translateY(-50%);
       content: "";
-      background-image: url(../../dist/img/i-arrow.svg);
+      background-image: url(../../../dist/img/i-arrow.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 9px;
@@ -64,6 +64,12 @@ a {
       }
     }
   }
+}
+
+::placeholder {
+  font-family: $font-stack;
+  @include font18;
+  color: rgba($black, 0.3);
 }
 
 // Js

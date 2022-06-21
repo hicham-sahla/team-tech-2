@@ -30,6 +30,7 @@ app.set("view engine", "ejs");
 // Using routes
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('pages/home'));
+
 app.use(serieRoutes);
 app.use(authRoutes);
 

@@ -1,0 +1,42 @@
+.main-create {
+    form {
+        @include flex(column, 10px);
+    }
+
+    label {
+        @include font18;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        @include font18;
+        padding: 13px 20px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    div {
+        @include grid(20px 1fr, 10px);
+        align-items: center;
+
+        label {
+            @include font16;
+            font-weight: normal;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0px;
+        }
+    }
+
+    button {
+        @include btn-1;
+    }
+}
