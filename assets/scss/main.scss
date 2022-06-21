@@ -2,9 +2,9 @@
 @import "home";
 @import "series";
 @import "sign";
-@import "form-test";
 @import "details";
 @import "profile";
+@import "create";
 @import "breakpoints";
 
 * {
@@ -64,6 +64,12 @@ a {
       }
     }
   }
+}
+
+::placeholder {
+  font-family: $font-stack;
+  @include font18;
+  color: rgba($black, 0.3);
 }
 
 // Js
