@@ -2,10 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const compression = require("compression");
 const path = require("path");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const compression = require("compression");
 const { checkUser } = require("./middleware/authMiddleware");
 const connectDB = require("./config/dbConn");
 
