@@ -3,6 +3,8 @@
 ## Over dit project
 Dit teamgedeelte is deel van Project Tech op de opleiding Communication and Multimedia Design op de Hva. Het is de bedoeling dat we onze gemaakte features van het individuele deel van het project samenvoegen en aanvullen tot een werkende applicatie.
 
+Ga naar [Heroku](https://teamtech4-2.herokuapp.com/)
+
 
 ## Concept
 Voor dit project hebben wij de applicatie van Xiao Nan uitgewerkt. Het concept is dat er een kdrama applicatie is gemaakt om kdrama series toe te voegen aan een lijstje. Met de Team opdracht wordt dit uitgebreid. Zo kunnen gebruikers inloggen / registreren en kunnen er kdrama’s toegevoegd worden.
