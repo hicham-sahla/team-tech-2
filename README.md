@@ -1,3 +1,5 @@
+![mockup](https://github.com/xiaonanpols21/block-tech-v2/blob/main/public/img-wiki/team-cover.jpg)
+
 ## Over dit project
 Dit teamgedeelte is deel van Project Tech op de opleiding Communication and Multimedia Design op de Hva. Het is de bedoeling dat we onze gemaakte features van het individuele deel van het project samenvoegen en aanvullen tot een werkende applicatie.
 
@@ -38,7 +40,7 @@ Tijdens het project hebben we meerdere resources en services gebruikt die het mo
 - [Gulp](https://gulpjs.com/)
 
 ## License
-Licensed under the MIT License
+Licensed under the GPL-3.0 license
 
 ## Contact
 hicham.sahla@hva.nl
