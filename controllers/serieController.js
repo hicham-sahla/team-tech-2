@@ -1,10 +1,24 @@
 const Serie = require("../models/Serie");
+const User = require("../models/User");
 
 const serie_index = (req, res) => {
   Serie.find()
     .lean()
     .then((result) => {
       res.render("series/index", {
+        series: result,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+const serie_liked = (req, res) => {
+  Serie.find()
+    .lean()
+    .then((result) => {
+      res.render("series/liked", {
         series: result,
       });
     })
@@ -44,6 +58,7 @@ const serie_create_post = (req, res) => {
 
 module.exports = {
   serie_index,
+  serie_liked,
   serie_details,
   serie_create_get,
   serie_create_post,
