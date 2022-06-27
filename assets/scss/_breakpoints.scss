@@ -121,9 +121,16 @@
     @include width100;
 
     & > button {
-      padding: 25px 30px;
+      padding: 25px 25px;
       border-radius: 20px;
       font-weight: bold;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
     }
   }
 

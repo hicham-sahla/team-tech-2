@@ -1,5 +1,6 @@
 const Serie = require("../models/Serie");
 const User = require("../models/User");
+const jwt = require("jsonwebtoken");
 
 const serie_index = (req, res) => {
   Serie.find()
@@ -15,16 +16,32 @@ const serie_index = (req, res) => {
 };
 
 const serie_liked = (req, res) => {
-  Serie.find()
-    .lean()
-    .then((result) => {
-      res.render("series/liked", {
-        series: result,
+  //de token ophalen en opslaan in const token
+  const token = req.cookies.jwt;
+  //verify jwt token
+  jwt.verify(token, "secret", async (err, decodedToken) => {
+    //error handling
+    if (err) console.log(err); // eg. invalid token, or expired token
+    //user ophalen met findbyid
+    let user = await User.findById(decodedToken.id);
+    //series ophalen
+    Serie.find()
+      .lean()
+      .then((series) => {
+        //series filteren op liked
+        const likedSeries = series.filter((serie) =>
+          //series de overeen komen met de ids
+          user.likes.includes(serie._id)
+        );
+
+        res.render("series/liked", {
+          series: likedSeries,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  });
 };
 
 const serie_details = (req, res) => {

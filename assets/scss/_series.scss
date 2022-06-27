@@ -1,94 +1,105 @@
 h1 {
-    @include font26;
-    margin-bottom: 30px;
+  @include font26;
 }
 
 .add-serie {
-    @include btn-1;
-    display: block;
-    padding: 10px 20px;
-    margin: 50px 0px 30px auto;
-    width: fit-content;
-    border-radius: 10px;
-    font-weight: normal;
+  @include btn-1;
+  display: block;
+  padding: 10px 20px;
+  margin: 10px 0px 10px 0px;
+  width: fit-content;
+  border-radius: 10px;
+  font-weight: normal;
+  height: 50px;
+  width: 200px;
+  text-align: center;
 }
 
 .main-series {
-    @include grid(1fr 1fr, 40px 20px);
+  @include grid(1fr 1fr, 40px 20px);
 
-    a {
-        color: $white;
-    }
+  a {
+    color: $white;
+  }
 
-    img {
-        width: 100%;
-        margin-bottom: 5px;
-        border-radius: 20px;
-    }
+  img {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 20px;
+  }
 
-    button {
-        background: none;
-        border: none;
-    }
+  button {
+    background: none;
+    border: none;
+  }
 
-    article {
-        position: relative;
-    }
+  article {
+    position: relative;
+  }
 
-    form {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
+  form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
-    h3 {
-        @include font16;
-    }
+  h3 {
+    @include font16;
+  }
 }
 
 .heart-default {
-    background: url(../../../dist/img/heart-default.svg) center center no-repeat;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 45px;
-    transition: .4s;
-    cursor: pointer;
+  background: url(../../../dist/img/heart-default.svg) center center no-repeat;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 45px;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .heart-added {
-    background: url(../../../dist/img/heart-added.svg) center center no-repeat;
+  background: url(../../../dist/img/heart-added.svg) center center no-repeat;
 }
 
 .heart-default:hover {
-    background: url(../../../dist/img/heart-hover.svg) center center no-repeat;
+  background: url(../../../dist/img/heart-hover.svg) center center no-repeat;
 }
 
 .heart-default:active {
-    background: url(../../../dist/img/heart-active.svg) center center no-repeat;
+  background: url(../../../dist/img/heart-active.svg) center center no-repeat;
 }
 
 .header-series {
+  margin-bottom: 30px;
+
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
+  }
 
-    ul {
-        @include flex(column, 30px);
+  ul {
+    @include flex(column, 30px);
 
-        li:first-of-type {
-            @include font26;
-            font-weight: bold;
-        }
+    li:first-of-type {
+      @include font26;
+      font-weight: bold;
     }
+  }
 
-    a {
-        display: block;
-    }
+  a {
+    display: block;
+  }
 }
 
 .logout {
-    @include btn-2;
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: fit-content;
+  @include btn-2;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  height: 50px;
 }

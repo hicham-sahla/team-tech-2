@@ -108,7 +108,7 @@ const user_dislike_post = (req, res) => {
     });
     const update = { likes: filteredLikesList };
     User.findOneAndUpdate(filter, update).then(() => {
-      res.redirect("/series");
+      res.redirect(req.get("referer"));
     });
   });
 };

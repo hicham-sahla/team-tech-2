@@ -8,14 +8,22 @@ $blue-hover: #335b7b;
 $blue-active: #223c52;
 $blue-light-focus: #95c3ea;
 
-$font-stack: 'Poppins', sans-serif;
+$font-stack: "Poppins", sans-serif;
 
-$gradient-header-cover: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
-$gradient-details-cover: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
+$gradient-header-cover: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(255, 255, 255, 0) 50%
+);
+$gradient-details-cover: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(255, 255, 255, 0) 50%
+);
 $btm-boradius-50: 0px 0px 50px 50px;
 $all-borderadius-50: 50px;
 $all-borderadius-40: 40px;
-$trans4: .4s;
+$trans4: 0.4s;
 
 // Font style
 @mixin font42 {
@@ -85,8 +93,6 @@ $trans4: .4s;
 
 @mixin btn-2 {
   @include font18();
-  padding: 25px 30px;
-  width: 100%;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 20px;
@@ -126,7 +132,7 @@ $trans4: .4s;
 @mixin grid($fr, $gap) {
   display: grid;
   grid-template-columns: $fr;
-  gap: $gap; 
+  gap: $gap;
 }
 
 @mixin flex($direction, $flex-gap) {

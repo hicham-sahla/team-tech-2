@@ -7,23 +7,27 @@
 
 <body class="body-series">
   <header class="header-series">
-    <ul>
-      <% if (user) { %>
-        <li>Welcome, <%= user.email %>
-        </li>
-        <li><a class="logout" href="/logout">Log out</a></li>
+
+    <% if (user) { %>
+      <h2>Welcome, <%= user.email %>
+      </h2>
+      <section>
+        <a class="logout" href="/logout">Log out</a>
         <a class="add-serie" href="series/liked">My liked series</a>
+      </section>
 
-        <% } else { %>
-          <li><a href="/login">Log in</a></li>
-          <li><a href="/signup" class="btn">Sign up</a></li>
-          <% } %>
-    </ul>
+
+      <% } else { %>
+        <a href="/login">Log in</a>
+        <a href="/signup" class="btn">Sign up</a>
+        <% } %>
+
   </header>
-  <h1>Choose Series</h1>
+  <section>
+    <h1>Choose Series</h1>
 
-  <a class="add-serie" href="series/create">Add Series</a>
-
+    <a class="add-serie" href="series/create">Add series</a>
+  </section>
   <main class="main-series">
     <% series.forEach(serie=> { %>
       <article class="card">

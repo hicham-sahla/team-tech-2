@@ -98,8 +98,6 @@
 .main-home a:last-of-type {
   font-size: 18px;
   line-height: 30px;
-  padding: 25px 30px;
-  width: 100%;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
@@ -130,7 +128,6 @@
 h1 {
   font-size: 26px;
   line-height: 31px;
-  margin-bottom: 30px;
 }
 
 .add-serie {
@@ -148,10 +145,13 @@ h1 {
   cursor: pointer;
   display: block;
   padding: 10px 20px;
-  margin: 50px 0px 30px auto;
+  margin: 10px 0px 10px 0px;
   width: fit-content;
   border-radius: 10px;
   font-weight: normal;
+  height: 50px;
+  width: 200px;
+  text-align: center;
 }
 .add-serie:hover {
   background-color: #335b7b;
@@ -222,6 +222,13 @@ h1 {
 .header-series {
   margin-bottom: 30px;
 }
+.header-series section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
 .header-series ul {
   display: flex;
   flex-direction: column;
@@ -239,8 +246,6 @@ h1 {
 .logout {
   font-size: 18px;
   line-height: 30px;
-  padding: 25px 30px;
-  width: 100%;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
@@ -252,6 +257,7 @@ h1 {
   padding: 10px 20px;
   border-radius: 10px;
   width: fit-content;
+  height: 50px;
 }
 .logout:hover {
   background-color: white;
@@ -758,9 +764,16 @@ h1 {
     padding: 50px 150px;
   }
   .body-series > button {
-    padding: 25px 30px;
+    padding: 25px 25px;
     border-radius: 20px;
     font-weight: bold;
+  }
+  .body-series section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
   }
 
   .main-series {

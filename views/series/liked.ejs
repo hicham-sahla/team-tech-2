@@ -7,56 +7,56 @@
 
 <body class="body-series">
   <header class="header-series">
-    <ul>
-      <% if (user) { %>
-        <li>Welcome, <%= user.email %>
-        </li>
-        <li><a class="logout" href="/logout">Log out</a></li>
-        <% } else { %>
-          <li><a href="/login">Log in</a></li>
-          <li><a href="/signup" class="btn">Sign up</a></li>
-          <% } %>
-    </ul>
+
+    <% if (user) { %>
+      <h2> Welcome, <%= user.email %>
+      </h2>
+      <section>
+        <a class="logout" href="/logout">Log out</a>
+        <a class="add-serie" href="/series">Back to all series</a>
+      </section>
+      <% } else { %>
+        <a href="/login">Log in</a>
+        <a href="/signup" class="btn">Sign up</a>
+        <% } %>
+
   </header>
-  <h1>Your liked series</h1>
+  <section>
+    <h1>Your liked series</h1>
+  </section>
 
   <!-- <a class="add-serie" href="series/create">Add Series</a> -->
-  <%= console.log(user.likes);%>
-    <%= console.log(series);%>
+  <main class="main-series">
+    <% series.forEach(serie=> { %>
+      <article class="card">
+        <a href="/series/<%= serie._id %>">
+          <img loading="lazy" src="<%= serie.img %>" alt="<%= serie.title %>" />
+          <% if(user.likes.includes(serie._id)) { %>
+            <form action="/dislike/<%= user._id %>" method="post">
+              <button type="submit">
+                <span class="heart-default heart-added"></span>
+              </button>
+              <input type="hidden" name="serieId" value="<%= serie._id %>" />
+            </form>
+            <% } else { %>
+              <form action="/like/<%= user._id %>" method="post">
+                <button type="submit">
+                  <span class="heart-default "></span>
+                </button>
+                <input type="hidden" name="serieId" value="<%= serie._id %>" />
+              </form>
+              <% } %>
 
+                <h3>
+                  <%= serie.title %>
+                </h3>
+        </a>
+      </article>
+      <% }) %>
+  </main>
 
-
-      <main class="main-series">
-        <% series.forEach(serie=> { %>
-          <article class="card">
-            <a href="/series/<%= serie._id %>">
-              <img loading="lazy" src="<%= serie.img %>" alt="<%= serie.title %>" />
-              <% if(user.likes.includes(serie._id)) { %>
-                <form action="/dislike/<%= user._id %>" method="post">
-                  <button type="submit">
-                    <span class="heart-default heart-added"></span>
-                  </button>
-                  <input type="hidden" name="serieId" value="<%= serie._id %>" />
-                </form>
-                <% } else { %>
-                  <form action="/like/<%= user._id %>" method="post">
-                    <button type="submit">
-                      <span class="heart-default "></span>
-                    </button>
-                    <input type="hidden" name="serieId" value="<%= serie._id %>" />
-                  </form>
-                  <% } %>
-
-                    <h3>
-                      <%= serie.title %>
-                    </h3>
-            </a>
-          </article>
-          <% }) %>
-      </main>
-
-      <script src="../dist/js/visibility.js"></script>
-      <script src="../dist/js/serries.js"></script>
+  <script src="../dist/js/visibility.js"></script>
+  <script src="../dist/js/serries.js"></script>
 </body>
 
 </html>
