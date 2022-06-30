@@ -16,7 +16,7 @@ const serie_index = (req, res) => {
 };
 
 const serie_liked = (req, res) => {
-  //de token ophalen en opslaan in const token
+  //de user token ophalen en opslaan in const token
   const token = req.cookies.jwt;
   //verify jwt token
   jwt.verify(token, "secret", async (err, decodedToken) => {
